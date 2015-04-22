@@ -7,48 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ADA279201AE7C70A005D8F88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA2791F1AE7C70A005D8F88 /* AppDelegate.m */; };
-		ADA279221AE7C70A005D8F88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA279211AE7C70A005D8F88 /* main.m */; };
-		ADA279251AE7C70A005D8F88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA279241AE7C70A005D8F88 /* ViewController.m */; };
-		ADA279271AE7C70A005D8F88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA279261AE7C70A005D8F88 /* Images.xcassets */; };
-		ADA2792A1AE7C70A005D8F88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA279281AE7C70A005D8F88 /* Main.storyboard */; };
-		ADA279361AE7C70A005D8F88 /* KeyExtractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA279351AE7C70A005D8F88 /* KeyExtractorTests.m */; };
+		ADA2794E1AE7CC01005D8F88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */; };
+		ADA279501AE7CC01005D8F88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2794F1AE7CC01005D8F88 /* ViewController.swift */; };
+		ADA279521AE7CC01005D8F88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA279511AE7CC01005D8F88 /* Images.xcassets */; };
+		ADA279551AE7CC01005D8F88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA279531AE7CC01005D8F88 /* Main.storyboard */; };
+		ADA279611AE7CC01005D8F88 /* KeyExtractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA279601AE7CC01005D8F88 /* KeyExtractorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		ADA279301AE7C70A005D8F88 /* PBXContainerItemProxy */ = {
+		ADA2795B1AE7CC01005D8F88 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = ADA279111AE7C70A005D8F88 /* Project object */;
+			containerPortal = ADA279401AE7CC01005D8F88 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = ADA279181AE7C70A005D8F88;
+			remoteGlobalIDString = ADA279471AE7CC01005D8F88;
 			remoteInfo = KeyExtractor;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		ADA279191AE7C70A005D8F88 /* KeyExtractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyExtractor.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADA2791D1AE7C70A005D8F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADA2791E1AE7C70A005D8F88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		ADA2791F1AE7C70A005D8F88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ADA279211AE7C70A005D8F88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		ADA279231AE7C70A005D8F88 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		ADA279241AE7C70A005D8F88 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		ADA279261AE7C70A005D8F88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ADA279291AE7C70A005D8F88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ADA2792F1AE7C70A005D8F88 /* KeyExtractorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyExtractorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADA279341AE7C70A005D8F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADA279351AE7C70A005D8F88 /* KeyExtractorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyExtractorTests.m; sourceTree = "<group>"; };
+		ADA279481AE7CC01005D8F88 /* KeyExtractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyExtractor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA2794C1AE7CC01005D8F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADA2794F1AE7CC01005D8F88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADA279511AE7CC01005D8F88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ADA279541AE7CC01005D8F88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADA2795A1AE7CC01005D8F88 /* KeyExtractorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyExtractorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA2795F1AE7CC01005D8F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADA279601AE7CC01005D8F88 /* KeyExtractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyExtractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ADA279161AE7C70A005D8F88 /* Frameworks */ = {
+		ADA279451AE7CC01005D8F88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADA2792C1AE7C70A005D8F88 /* Frameworks */ = {
+		ADA279571AE7CC01005D8F88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,60 +54,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ADA279101AE7C70A005D8F88 = {
+		ADA2793F1AE7CC01005D8F88 = {
 			isa = PBXGroup;
 			children = (
-				ADA2791B1AE7C70A005D8F88 /* KeyExtractor */,
-				ADA279321AE7C70A005D8F88 /* KeyExtractorTests */,
-				ADA2791A1AE7C70A005D8F88 /* Products */,
+				ADA2794A1AE7CC01005D8F88 /* KeyExtractor */,
+				ADA2795D1AE7CC01005D8F88 /* KeyExtractorTests */,
+				ADA279491AE7CC01005D8F88 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		ADA2791A1AE7C70A005D8F88 /* Products */ = {
+		ADA279491AE7CC01005D8F88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ADA279191AE7C70A005D8F88 /* KeyExtractor.app */,
-				ADA2792F1AE7C70A005D8F88 /* KeyExtractorTests.xctest */,
+				ADA279481AE7CC01005D8F88 /* KeyExtractor.app */,
+				ADA2795A1AE7CC01005D8F88 /* KeyExtractorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ADA2791B1AE7C70A005D8F88 /* KeyExtractor */ = {
+		ADA2794A1AE7CC01005D8F88 /* KeyExtractor */ = {
 			isa = PBXGroup;
 			children = (
-				ADA2791E1AE7C70A005D8F88 /* AppDelegate.h */,
-				ADA2791F1AE7C70A005D8F88 /* AppDelegate.m */,
-				ADA279231AE7C70A005D8F88 /* ViewController.h */,
-				ADA279241AE7C70A005D8F88 /* ViewController.m */,
-				ADA279261AE7C70A005D8F88 /* Images.xcassets */,
-				ADA279281AE7C70A005D8F88 /* Main.storyboard */,
-				ADA2791C1AE7C70A005D8F88 /* Supporting Files */,
+				ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */,
+				ADA2794F1AE7CC01005D8F88 /* ViewController.swift */,
+				ADA279511AE7CC01005D8F88 /* Images.xcassets */,
+				ADA279531AE7CC01005D8F88 /* Main.storyboard */,
+				ADA2794B1AE7CC01005D8F88 /* Supporting Files */,
 			);
 			path = KeyExtractor;
 			sourceTree = "<group>";
 		};
-		ADA2791C1AE7C70A005D8F88 /* Supporting Files */ = {
+		ADA2794B1AE7CC01005D8F88 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				ADA2791D1AE7C70A005D8F88 /* Info.plist */,
-				ADA279211AE7C70A005D8F88 /* main.m */,
+				ADA2794C1AE7CC01005D8F88 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		ADA279321AE7C70A005D8F88 /* KeyExtractorTests */ = {
+		ADA2795D1AE7CC01005D8F88 /* KeyExtractorTests */ = {
 			isa = PBXGroup;
 			children = (
-				ADA279351AE7C70A005D8F88 /* KeyExtractorTests.m */,
-				ADA279331AE7C70A005D8F88 /* Supporting Files */,
+				ADA279601AE7CC01005D8F88 /* KeyExtractorTests.swift */,
+				ADA2795E1AE7CC01005D8F88 /* Supporting Files */,
 			);
 			path = KeyExtractorTests;
 			sourceTree = "<group>";
 		};
-		ADA279331AE7C70A005D8F88 /* Supporting Files */ = {
+		ADA2795E1AE7CC01005D8F88 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				ADA279341AE7C70A005D8F88 /* Info.plist */,
+				ADA2795F1AE7CC01005D8F88 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,13 +112,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ADA279181AE7C70A005D8F88 /* KeyExtractor */ = {
+		ADA279471AE7CC01005D8F88 /* KeyExtractor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADA279391AE7C70A005D8F88 /* Build configuration list for PBXNativeTarget "KeyExtractor" */;
+			buildConfigurationList = ADA279641AE7CC01005D8F88 /* Build configuration list for PBXNativeTarget "KeyExtractor" */;
 			buildPhases = (
-				ADA279151AE7C70A005D8F88 /* Sources */,
-				ADA279161AE7C70A005D8F88 /* Frameworks */,
-				ADA279171AE7C70A005D8F88 /* Resources */,
+				ADA279441AE7CC01005D8F88 /* Sources */,
+				ADA279451AE7CC01005D8F88 /* Frameworks */,
+				ADA279461AE7CC01005D8F88 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -133,46 +126,46 @@
 			);
 			name = KeyExtractor;
 			productName = KeyExtractor;
-			productReference = ADA279191AE7C70A005D8F88 /* KeyExtractor.app */;
+			productReference = ADA279481AE7CC01005D8F88 /* KeyExtractor.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ADA2792E1AE7C70A005D8F88 /* KeyExtractorTests */ = {
+		ADA279591AE7CC01005D8F88 /* KeyExtractorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADA2793C1AE7C70A005D8F88 /* Build configuration list for PBXNativeTarget "KeyExtractorTests" */;
+			buildConfigurationList = ADA279671AE7CC01005D8F88 /* Build configuration list for PBXNativeTarget "KeyExtractorTests" */;
 			buildPhases = (
-				ADA2792B1AE7C70A005D8F88 /* Sources */,
-				ADA2792C1AE7C70A005D8F88 /* Frameworks */,
-				ADA2792D1AE7C70A005D8F88 /* Resources */,
+				ADA279561AE7CC01005D8F88 /* Sources */,
+				ADA279571AE7CC01005D8F88 /* Frameworks */,
+				ADA279581AE7CC01005D8F88 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				ADA279311AE7C70A005D8F88 /* PBXTargetDependency */,
+				ADA2795C1AE7CC01005D8F88 /* PBXTargetDependency */,
 			);
 			name = KeyExtractorTests;
 			productName = KeyExtractorTests;
-			productReference = ADA2792F1AE7C70A005D8F88 /* KeyExtractorTests.xctest */;
+			productReference = ADA2795A1AE7CC01005D8F88 /* KeyExtractorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		ADA279111AE7C70A005D8F88 /* Project object */ = {
+		ADA279401AE7CC01005D8F88 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "polytech-RE";
 				TargetAttributes = {
-					ADA279181AE7C70A005D8F88 = {
+					ADA279471AE7CC01005D8F88 = {
 						CreatedOnToolsVersion = 6.3;
 					};
-					ADA2792E1AE7C70A005D8F88 = {
+					ADA279591AE7CC01005D8F88 = {
 						CreatedOnToolsVersion = 6.3;
-						TestTargetID = ADA279181AE7C70A005D8F88;
+						TestTargetID = ADA279471AE7CC01005D8F88;
 					};
 				};
 			};
-			buildConfigurationList = ADA279141AE7C70A005D8F88 /* Build configuration list for PBXProject "KeyExtractor" */;
+			buildConfigurationList = ADA279431AE7CC01005D8F88 /* Build configuration list for PBXProject "KeyExtractor" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -180,28 +173,28 @@
 				en,
 				Base,
 			);
-			mainGroup = ADA279101AE7C70A005D8F88;
-			productRefGroup = ADA2791A1AE7C70A005D8F88 /* Products */;
+			mainGroup = ADA2793F1AE7CC01005D8F88;
+			productRefGroup = ADA279491AE7CC01005D8F88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ADA279181AE7C70A005D8F88 /* KeyExtractor */,
-				ADA2792E1AE7C70A005D8F88 /* KeyExtractorTests */,
+				ADA279471AE7CC01005D8F88 /* KeyExtractor */,
+				ADA279591AE7CC01005D8F88 /* KeyExtractorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		ADA279171AE7C70A005D8F88 /* Resources */ = {
+		ADA279461AE7CC01005D8F88 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADA279271AE7C70A005D8F88 /* Images.xcassets in Resources */,
-				ADA2792A1AE7C70A005D8F88 /* Main.storyboard in Resources */,
+				ADA279521AE7CC01005D8F88 /* Images.xcassets in Resources */,
+				ADA279551AE7CC01005D8F88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADA2792D1AE7C70A005D8F88 /* Resources */ = {
+		ADA279581AE7CC01005D8F88 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -211,39 +204,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ADA279151AE7C70A005D8F88 /* Sources */ = {
+		ADA279441AE7CC01005D8F88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADA279251AE7C70A005D8F88 /* ViewController.m in Sources */,
-				ADA279221AE7C70A005D8F88 /* main.m in Sources */,
-				ADA279201AE7C70A005D8F88 /* AppDelegate.m in Sources */,
+				ADA279501AE7CC01005D8F88 /* ViewController.swift in Sources */,
+				ADA2794E1AE7CC01005D8F88 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADA2792B1AE7C70A005D8F88 /* Sources */ = {
+		ADA279561AE7CC01005D8F88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADA279361AE7C70A005D8F88 /* KeyExtractorTests.m in Sources */,
+				ADA279611AE7CC01005D8F88 /* KeyExtractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		ADA279311AE7C70A005D8F88 /* PBXTargetDependency */ = {
+		ADA2795C1AE7CC01005D8F88 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ADA279181AE7C70A005D8F88 /* KeyExtractor */;
-			targetProxy = ADA279301AE7C70A005D8F88 /* PBXContainerItemProxy */;
+			target = ADA279471AE7CC01005D8F88 /* KeyExtractor */;
+			targetProxy = ADA2795B1AE7CC01005D8F88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ADA279281AE7C70A005D8F88 /* Main.storyboard */ = {
+		ADA279531AE7CC01005D8F88 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ADA279291AE7C70A005D8F88 /* Base */,
+				ADA279541AE7CC01005D8F88 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -251,7 +243,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		ADA279371AE7C70A005D8F88 /* Debug */ = {
+		ADA279621AE7CC01005D8F88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -291,10 +283,11 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		ADA279381AE7C70A005D8F88 /* Release */ = {
+		ADA279631AE7CC01005D8F88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -330,7 +323,7 @@
 			};
 			name = Release;
 		};
-		ADA2793A1AE7C70A005D8F88 /* Debug */ = {
+		ADA279651AE7CC01005D8F88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -341,7 +334,7 @@
 			};
 			name = Debug;
 		};
-		ADA2793B1AE7C70A005D8F88 /* Release */ = {
+		ADA279661AE7CC01005D8F88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -352,7 +345,7 @@
 			};
 			name = Release;
 		};
-		ADA2793D1AE7C70A005D8F88 /* Debug */ = {
+		ADA279681AE7CC01005D8F88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -372,7 +365,7 @@
 			};
 			name = Debug;
 		};
-		ADA2793E1AE7C70A005D8F88 /* Release */ = {
+		ADA279691AE7CC01005D8F88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -391,32 +384,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ADA279141AE7C70A005D8F88 /* Build configuration list for PBXProject "KeyExtractor" */ = {
+		ADA279431AE7CC01005D8F88 /* Build configuration list for PBXProject "KeyExtractor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADA279371AE7C70A005D8F88 /* Debug */,
-				ADA279381AE7C70A005D8F88 /* Release */,
+				ADA279621AE7CC01005D8F88 /* Debug */,
+				ADA279631AE7CC01005D8F88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADA279391AE7C70A005D8F88 /* Build configuration list for PBXNativeTarget "KeyExtractor" */ = {
+		ADA279641AE7CC01005D8F88 /* Build configuration list for PBXNativeTarget "KeyExtractor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADA2793A1AE7C70A005D8F88 /* Debug */,
-				ADA2793B1AE7C70A005D8F88 /* Release */,
+				ADA279651AE7CC01005D8F88 /* Debug */,
+				ADA279661AE7CC01005D8F88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		ADA2793C1AE7C70A005D8F88 /* Build configuration list for PBXNativeTarget "KeyExtractorTests" */ = {
+		ADA279671AE7CC01005D8F88 /* Build configuration list for PBXNativeTarget "KeyExtractorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADA2793D1AE7C70A005D8F88 /* Debug */,
-				ADA2793E1AE7C70A005D8F88 /* Release */,
+				ADA279681AE7CC01005D8F88 /* Debug */,
+				ADA279691AE7CC01005D8F88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = ADA279111AE7C70A005D8F88 /* Project object */;
+	rootObject = ADA279401AE7CC01005D8F88 /* Project object */;
 }
