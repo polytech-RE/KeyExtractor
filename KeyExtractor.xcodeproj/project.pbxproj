@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6FEADBFE1AE9191500469EEC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADBFD1AE9191500469EEC /* File.swift */; };
+		6FEADBFF1AE9191500469EEC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADBFD1AE9191500469EEC /* File.swift */; };
+		6FEADC011AE9194700469EEC /* FileImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC001AE9194700469EEC /* FileImporter.swift */; };
+		6FEADC021AE9194700469EEC /* FileImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC001AE9194700469EEC /* FileImporter.swift */; };
+		6FEADC041AE919CD00469EEC /* Software.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC031AE919CD00469EEC /* Software.swift */; };
+		6FEADC051AE919CD00469EEC /* Software.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC031AE919CD00469EEC /* Software.swift */; };
+		6FEADC081AE91CAD00469EEC /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC071AE91CAD00469EEC /* FileManager.swift */; };
+		6FEADC091AE91CAD00469EEC /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC071AE91CAD00469EEC /* FileManager.swift */; };
+		6FEADC0B1AE91D0400469EEC /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC0A1AE91D0400469EEC /* Logger.swift */; };
+		6FEADC0C1AE91D0400469EEC /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC0A1AE91D0400469EEC /* Logger.swift */; };
+		6FEADC111AE91DA700469EEC /* SoftwareKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC101AE91DA700469EEC /* SoftwareKey.swift */; };
+		6FEADC121AE91DA700469EEC /* SoftwareKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC101AE91DA700469EEC /* SoftwareKey.swift */; };
+		6FEADC141AE91DE700469EEC /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC131AE91DE700469EEC /* Launcher.swift */; };
+		6FEADC151AE91DE700469EEC /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC131AE91DE700469EEC /* Launcher.swift */; };
 		ADA2794E1AE7CC01005D8F88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */; };
 		ADA279501AE7CC01005D8F88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2794F1AE7CC01005D8F88 /* ViewController.swift */; };
 		ADA279521AE7CC01005D8F88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA279511AE7CC01005D8F88 /* Images.xcassets */; };
@@ -25,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6FEADBFD1AE9191500469EEC /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		6FEADC001AE9194700469EEC /* FileImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileImporter.swift; sourceTree = "<group>"; };
+		6FEADC031AE919CD00469EEC /* Software.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Software.swift; sourceTree = "<group>"; };
+		6FEADC071AE91CAD00469EEC /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		6FEADC0A1AE91D0400469EEC /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		6FEADC101AE91DA700469EEC /* SoftwareKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareKey.swift; sourceTree = "<group>"; };
+		6FEADC131AE91DE700469EEC /* Launcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		ADA279481AE7CC01005D8F88 /* KeyExtractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyExtractor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA2794C1AE7CC01005D8F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +75,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6FEADBF61AE9184700469EEC /* DataClasses */ = {
+			isa = PBXGroup;
+			children = (
+				6FEADBFD1AE9191500469EEC /* File.swift */,
+				6FEADC031AE919CD00469EEC /* Software.swift */,
+				6FEADC101AE91DA700469EEC /* SoftwareKey.swift */,
+			);
+			name = DataClasses;
+			sourceTree = "<group>";
+		};
+		6FEADBF81AE9187000469EEC /* TechnicalClasses */ = {
+			isa = PBXGroup;
+			children = (
+				6FEADC071AE91CAD00469EEC /* FileManager.swift */,
+			);
+			name = TechnicalClasses;
+			sourceTree = "<group>";
+		};
+		6FEADBF91AE9187C00469EEC /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				6FEADBF61AE9184700469EEC /* DataClasses */,
+				6FEADBF81AE9187000469EEC /* TechnicalClasses */,
+			);
+			name = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		6FEADBFA1AE9189200469EEC /* Communication */ = {
+			isa = PBXGroup;
+			children = (
+				6FEADC001AE9194700469EEC /* FileImporter.swift */,
+				6FEADC0A1AE91D0400469EEC /* Logger.swift */,
+			);
+			name = Communication;
+			sourceTree = "<group>";
+		};
+		6FEADBFC1AE918C900469EEC /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				ADA2794F1AE7CC01005D8F88 /* ViewController.swift */,
+				ADA279531AE7CC01005D8F88 /* Main.storyboard */,
+			);
+			name = UserInterface;
+			sourceTree = "<group>";
+		};
+		6FEADC191AE9226000469EEC /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
 		ADA2793F1AE7CC01005D8F88 = {
 			isa = PBXGroup;
 			children = (
@@ -75,10 +148,13 @@
 		ADA2794A1AE7CC01005D8F88 /* KeyExtractor */ = {
 			isa = PBXGroup;
 			children = (
+				6FEADC191AE9226000469EEC /* Configuration */,
+				6FEADBFA1AE9189200469EEC /* Communication */,
+				6FEADBF91AE9187C00469EEC /* BusinessLogic */,
+				6FEADBFC1AE918C900469EEC /* UserInterface */,
 				ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */,
-				ADA2794F1AE7CC01005D8F88 /* ViewController.swift */,
+				6FEADC131AE91DE700469EEC /* Launcher.swift */,
 				ADA279511AE7CC01005D8F88 /* Images.xcassets */,
-				ADA279531AE7CC01005D8F88 /* Main.storyboard */,
 				ADA2794B1AE7CC01005D8F88 /* Supporting Files */,
 			);
 			path = KeyExtractor;
@@ -209,7 +285,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA279501AE7CC01005D8F88 /* ViewController.swift in Sources */,
+				6FEADC111AE91DA700469EEC /* SoftwareKey.swift in Sources */,
+				6FEADC041AE919CD00469EEC /* Software.swift in Sources */,
+				6FEADBFE1AE9191500469EEC /* File.swift in Sources */,
+				6FEADC081AE91CAD00469EEC /* FileManager.swift in Sources */,
+				6FEADC0B1AE91D0400469EEC /* Logger.swift in Sources */,
 				ADA2794E1AE7CC01005D8F88 /* AppDelegate.swift in Sources */,
+				6FEADC141AE91DE700469EEC /* Launcher.swift in Sources */,
+				6FEADC011AE9194700469EEC /* FileImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +300,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FEADC121AE91DA700469EEC /* SoftwareKey.swift in Sources */,
+				6FEADC151AE91DE700469EEC /* Launcher.swift in Sources */,
+				6FEADC091AE91CAD00469EEC /* FileManager.swift in Sources */,
+				6FEADC0C1AE91D0400469EEC /* Logger.swift in Sources */,
+				6FEADC051AE919CD00469EEC /* Software.swift in Sources */,
+				6FEADC021AE9194700469EEC /* FileImporter.swift in Sources */,
 				ADA279611AE7CC01005D8F88 /* KeyExtractorTests.swift in Sources */,
+				6FEADBFF1AE9191500469EEC /* File.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +490,7 @@
 				ADA279661AE7CC01005D8F88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADA279671AE7CC01005D8F88 /* Build configuration list for PBXNativeTarget "KeyExtractorTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +499,7 @@
 				ADA279691AE7CC01005D8F88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
