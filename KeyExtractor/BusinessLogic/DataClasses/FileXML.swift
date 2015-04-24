@@ -8,20 +8,41 @@
 
 import Foundation
 
-/*
 class FileXML: File {
     
-    var path: String
+    //
+    
+    let path: String
+    
+    let xmlParser : NSXMLParser
     
     //initializers
     
-    //initialize the Abstract object File with the String path
+    /*  Initialize the Abstract object File
+    with the path
+    */
     init(path: String){
         self.path = path
-    }
-    
-    func findSerial(test: String) -> String {
+        let data: NSData = NSData(contentsOfFile: path)!
+        self.xmlParser = NSXMLParser(data: data)
         
     }
     
-}*/
+    //functions
+    
+    /*  This function allows to find a string value
+    in a xml file.
+    The xml file use a markup system, ie
+    for example, with the markup sequence in a xml
+    we can find a software licence
+    */
+    
+    
+    func findValue(key: String) -> String? {
+        self.xmlParser.
+        return nil
+    }
+
+
+
+}
