@@ -41,6 +41,8 @@ class KeyExtractorTests: XCTestCase {
         let filePlist : FilePlist
         filePlist = FilePlist(path: path)
         
+        let key: String = "sequence"
+        
         XCTAssertNotNil(filePlist,"problème du fichier Plist")
         
         XCTAssertNotNil(filePlist.path,"problème d'initialisation du path pour le fichier plist")
@@ -49,10 +51,17 @@ class KeyExtractorTests: XCTestCase {
         XCTAssertNotNil(filePlist.dictionary,"problème d'initialisation du dictionary pour le fichier plist")
 
         var value: AnyObject?
-        value = filePlist.findValueAny("sequence")
+        value = filePlist.findValueAny(key)
         XCTAssertNotNil(value, "aucune valeur n'est associé à la clé")
         value = filePlist.findValueAny("toto")
         XCTAssertNil(value, "une valeur est associée à la clé")
+        
+        var stringValue: String?
+        stringValue = filePlist.findValue(key)
+        
+        XCTAssertNotNil(stringValue, "aucune valeur n'est associé à la clé")
+        stringValue = filePlist.findValue("toto")
+        XCTAssertNil(stringValue, "une valeur est associée à la clé")
         
     }
     
