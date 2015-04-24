@@ -47,10 +47,12 @@ class KeyExtractorTests: XCTestCase {
         XCTAssertEqual(filePlist.path, path, "problème le path du fichier plist différent du path donné")
         
         XCTAssertNotNil(filePlist.dictionary,"problème d'initialisation du dictionary pour le fichier plist")
-        
-        let value :String?
-        value = filePlist.findValue("licensing")
+
+        var value: AnyObject?
+        value = filePlist.findValueAny("sequence")
         XCTAssertNotNil(value, "aucune valeur n'est associé à la clé")
+        value = filePlist.findValueAny("toto")
+        XCTAssertNil(value, "une valeur est associée à la clé")
         
     }
     
