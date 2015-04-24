@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+/*
+class FileXML: File {
+    
+    var path: String
+    
+    //initializers
+    
+    //initialize the Abstract object File with the String path
+    init(path: String){
+        self.path = path
+    }
+    
+    func findSerial(test: String) -> String {
+        
+    }
+    
+}*/
