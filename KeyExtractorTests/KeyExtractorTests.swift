@@ -33,4 +33,25 @@ class KeyExtractorTests: XCTestCase {
         }
     }
     
+    func testFilePlist() {
+        
+        let path = "/Library/Preferences/com.microsoft.office.licensing.plist"
+        XCTAssertNotNil(path,"problème d'initialisation du path")
+        
+        let filePlist : FilePlist
+        filePlist = FilePlist(path: path)
+        
+        XCTAssertNotNil(filePlist,"problème du fichier Plist")
+        
+        XCTAssertNotNil(filePlist.path,"problème d'initialisation du path pour le fichier plist")
+        XCTAssertEqual(filePlist.path, path, "problème le path du fichier plist différent du path donné")
+        
+        XCTAssertNotNil(filePlist.dictionary,"problème d'initialisation du dictionary pour le fichier plist")
+        
+        let value :String?
+        value = filePlist.findValue("licensing")
+        XCTAssertNotNil(value, "aucune valeur n'est associé à la clé")
+        
+    }
+    
 }
