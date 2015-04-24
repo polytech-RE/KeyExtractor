@@ -39,13 +39,27 @@ class FilePlist: File {
         
         if ( self.dictionary.objectForKey(key) != nil ){
             
-            let dictionaryTemp = self.dictionary.objectForKey(key)
-            let value : String = String(stringInterpolationSegment: dictionaryTemp)
-            return value
+            let value: String = (self.dictionary.objectForKey(key) as! String?)!
+
+            return "\(value)"
 
         }
         return nil
     }
+    
+    func findValueAny(key: String) -> AnyObject? {
+        
+        if ( self.dictionary.objectForKey(key) != nil ){
+            
+            let dictionaryTemp: AnyObject
+            dictionaryTemp = self.dictionary.valueForKey(key)!
+            
+            return dictionaryTemp
+            
+        }
+        return nil
+    }
+
     
         
 }
