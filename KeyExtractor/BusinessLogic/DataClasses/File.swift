@@ -8,15 +8,17 @@
 
 import Foundation
 
-class File{
+/*no abstract class in swift
+we must use protocol 
+A File corresponds to an "abstract" object
+which contains the file's path on the
+hard drive.
+*/
+protocol File{
     
-    var path: String
+    /*  The file's path */
+    var path: String { get }
     
-    //initializers
+    func findValue(String) -> String?
     
-    //initialize the Abstract object File with the String path
-    init(path: String){
-        self.path = path
-    }
-
 }
