@@ -65,4 +65,26 @@ class KeyExtractorTests: XCTestCase {
         
     }
     
+    func testFileXML() {
+        
+        let path = "/Library/Preferences/com.microsoft.office.licensing.plist"
+        XCTAssertNotNil(path,"problème d'initialisation du path")
+        
+        let fileXML : FileXML
+        fileXML = FileXML(path: path)
+        
+        let key: String = "sequence"
+        
+        XCTAssertNotNil(fileXML,"problème du fichier Plist")
+        
+        XCTAssertNotNil(fileXML.path,"problème d'initialisation du path pour le fichier plist")
+        XCTAssertEqual(fileXML.path, path, "problème le path du fichier plist différent du path donné")
+        
+        XCTAssertNotNil(fileXML.xmlParser,"problème d'initialisation du dictionary pour le fichier plist")
+        
+        println("je suis passé")
+        fileXML.parser(parser: fileXML.xmlParser, didEndMappingPrefix: key)
+    }
+
+    
 }

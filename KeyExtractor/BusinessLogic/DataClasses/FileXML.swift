@@ -8,9 +8,17 @@
 
 import Foundation
 
-class FileXML: File {
+class FileXML: NSObject, File ,NSXMLParserDelegate {
     
     //
+    
+    // var to parse an XMLData
+    var parser = NSXMLParser()
+    var posts = NSMutableArray()
+    var elements = NSMutableDictionary()
+    var element = NSString()
+    var title1 = NSMutableString()
+    var date = NSMutableString()
     
     let path: String
     
@@ -25,10 +33,24 @@ class FileXML: File {
         self.path = path
         let data: NSData = NSData(contentsOfFile: path)!
         self.xmlParser = NSXMLParser(data: data)
-        
+        self.xmlParser.parse()
     }
     
     //functions
+    
+    func parser(parser: NSXMLParser, key: String)
+    {
+        if element.isEqualToString(key) {
+            
+        }
+    }
+    
+    func parser(parser: NSXMLParser!, didEndElement elementName: String!, key: String)
+    {
+        if (elementName as NSString).isEqualToString(key) {
+                posts.addObject(elements)
+        }
+    }
     
     /*  This function allows to find a string value
     in a xml file.
@@ -37,12 +59,11 @@ class FileXML: File {
     we can find a software licence
     */
     
-    
     func findValue(key: String) -> String? {
-        self.xmlParser.
+        
         return nil
     }
-
-
-
+    
+    
+    
 }
