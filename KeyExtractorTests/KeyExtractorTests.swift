@@ -32,7 +32,6 @@ class KeyExtractorTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
     func testFilePlist() {
         
         let path = "/Library/Preferences/com.microsoft.office.licensing.plist"
@@ -67,7 +66,11 @@ class KeyExtractorTests: XCTestCase {
     
     func testFileXML() {
         
+<<<<<<< Updated upstream
         let path = "/Library/ApplicationSupport/Adobe/AdobePhotoshopCS6/AMT_Driver/application.xml"
+=======
+        let path = "/Desktop/application.xml"
+>>>>>>> Stashed changes
         XCTAssertNotNil(path,"problème d'initialisation du path")
         
         let fileXML : FileXML
@@ -75,14 +78,18 @@ class KeyExtractorTests: XCTestCase {
         
         let key: String = "PayloadCode"
         
+<<<<<<< Updated upstream
         XCTAssertNotNil(fileXML,"problème du fichier xml")
+=======
+        XCTAssertNotNil(fileXML,"problème du fichier XML")
+>>>>>>> Stashed changes
         
         XCTAssertNotNil(fileXML.path,"problème d'initialisation du path pour le fichier xml")
         XCTAssertEqual(fileXML.path, path, "problème le path du fichier plist différent du path donné")
         
         XCTAssertNotNil(fileXML.xmlParser,"problème d'initialisation du dictionary pour le fichier xml")
 
-        //fileXML.parser(fileXML.xmlParser, foundCharacters: key)
+        fileXML.parser(foundCharacters: key)
     }
 
     

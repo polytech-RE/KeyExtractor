@@ -8,16 +8,14 @@
 
 import Foundation
 
-class FileXML: NSObject, File ,NSXMLParserDelegate {
+class FileXML: NSObject, File, NSXMLParserDelegate {
     
     //
     
     let path: String
     
     // var to parse an XMLData
-    var parser = NSXMLParser()
     let xmlParser : NSXMLParser
-    
     var elementName: String
     var licence: String
     
@@ -38,29 +36,29 @@ class FileXML: NSObject, File ,NSXMLParserDelegate {
     }
     
     //functions
-    
+    /*
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
         
         self.elementName = elementName
         
-        println("cecie est un test")
+        println("ceci est un test")
 
         if self.elementName == "sequence" {
-            println("cecie est un test")
+            println("ceci est un test")
             self.licence = "test"
         }
         
-    }
-    /*
-    func parser(parser: NSXMLParser, foundCharacters string: String?) {
+    }*/
+
+    func parser(foundCharacters string: String?) {
         let data = string!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        NSLog("ok? : \(data.isEmpty)")
         if (!data.isEmpty) {
             if self.elementName == "sequence" {
                 self.licence += data
             }
         }
     }
-    */
     /*
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
