@@ -9,10 +9,8 @@
 import Foundation
 
 class FileFactory {
-
     
-    
-    static func createFile(PathWithoutName: String, name: String, ext: String) -> File{
+    static func createFile(PathWithoutName: String, name: String, ext: String) -> File?{
     
         let path: String
         path = PathWithoutName + name + ext
@@ -23,9 +21,8 @@ class FileFactory {
             case "plist:":
                 return FilePlist(path: path)
             default:
-                NSLog("probleme the format isn't implemented")
-                //TODO Exception
+                NSException(name: "extension", reason: "the extension isn't implemented", userInfo: nil)
+                return nil
         }
     }
-
 }
