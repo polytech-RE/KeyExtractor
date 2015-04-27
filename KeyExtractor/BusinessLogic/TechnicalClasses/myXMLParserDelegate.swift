@@ -8,8 +8,6 @@
 
 import Foundation
 
-var str = "Hello, playground"
-
 class myXMLParserDelegate: NSObject, NSXMLParserDelegate{
     
     var path:String
@@ -18,7 +16,7 @@ class myXMLParserDelegate: NSObject, NSXMLParserDelegate{
         self.path = path
     }
     
-    func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!, attributes attributeDict: NSDictionary!) {
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
         println("Element's name is \(elementName)")
         println("Element's attributes are \(attributeDict)")
     }

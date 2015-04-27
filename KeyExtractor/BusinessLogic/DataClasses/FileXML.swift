@@ -10,17 +10,11 @@ import Foundation
 
 class FileXML: NSObject, File{
     
-    //
-    
     let path: String
-    
-    // var to parse an XMLData
     let xmlParser : NSXMLParser
     var elementName: String
     var licence: String
     
-    
-    //initializers
     
     /*  Initialize the Abstract object File
     with the path

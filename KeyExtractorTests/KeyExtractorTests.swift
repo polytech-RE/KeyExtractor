@@ -66,14 +66,15 @@ class KeyExtractorTests: XCTestCase {
     
     func testFileXML() {
         
+        println("coucou")
+        
         let path = "/Desktop/application.xml"
         
         XCTAssertNotNil(path,"problème d'initialisation du path")
         
+        let fileXML : FileXML
+        fileXML = FileXML(path: path)
        
-        
-        let key: String = "PayloadCode"
-        
         XCTAssertNotNil(fileXML,"problème du fichier XML")
         
         XCTAssertNotNil(fileXML.path,"problème d'initialisation du path pour le fichier xml")
@@ -81,15 +82,8 @@ class KeyExtractorTests: XCTestCase {
         
         XCTAssertNotNil(fileXML.xmlParser,"problème d'initialisation du dictionary pour le fichier xml")
         
+        let key: String = "PayloadCode"
         
-        
-        var instance = Parse()
-        instance.beginParse()
-        
-        let fileXML : FileXML
-        fileXML = FileXML(path: path)
-        
-        XCTAssertEqual(fileXML.parser(foundCharacters: key),"74EB3499-8B95-4B5C-96EB-7B342F3FD0C6")
     }
 
     
