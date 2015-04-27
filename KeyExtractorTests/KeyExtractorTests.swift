@@ -81,9 +81,8 @@ class KeyExtractorTests: XCTestCase {
         XCTAssertEqual(fileXML.path, path, "problème le path du fichier plist différent du path donné")
         
         XCTAssertNotNil(fileXML.xmlParser,"problème d'initialisation du dictionary pour le fichier plist")
-        
-        println("je suis passé")
-        fileXML.parser(parser: fileXML.xmlParser, didEndMappingPrefix: key)
+
+        //fileXML.parser(fileXML.xmlParser, foundCharacters: key)
     }
 
     
