@@ -10,15 +10,15 @@ import Foundation
 
 class FileFactory {
     
-    static func createFile(PathWithoutName: String, name: String, ext: String) -> File?{
+    static func createFile(pathWithoutName: String, name: String, ext: String) -> File?{
     
         let path: String
-        path = PathWithoutName + name + ext
+        path = pathWithoutName + "/" + name + "." + ext
         
         switch ext{
             case "xml":
                 return FileXML(path: path)
-            case "plist:":
+            case "plist":
                 return FilePlist(path: path)
             default:
                 NSException(name: "extension", reason: "the extension isn't implemented", userInfo: nil)

@@ -10,6 +10,7 @@
 		6F7F822E1AEE26F70033B834 /* FileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F822D1AEE26F70033B834 /* FileFactory.swift */; };
 		6FEADC141AE91DE700469EEC /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC131AE91DE700469EEC /* Launcher.swift */; };
 		6FEADC151AE91DE700469EEC /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC131AE91DE700469EEC /* Launcher.swift */; };
+		AD0C13511AEE450E008ACF09 /* FileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F822D1AEE26F70033B834 /* FileFactory.swift */; };
 		ADA2794E1AE7CC01005D8F88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */; };
 		ADA279521AE7CC01005D8F88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA279511AE7CC01005D8F88 /* Images.xcassets */; };
 		ADA279551AE7CC01005D8F88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA279531AE7CC01005D8F88 /* Main.storyboard */; };
@@ -322,6 +323,7 @@
 				ADA740A11AEA1F2100966518 /* ViewController.swift in Sources */,
 				ADA7409B1AEA1F2100966518 /* FileImporter.swift in Sources */,
 				ADA740901AEA1F0700966518 /* SoftwareKey.swift in Sources */,
+				AD0C13511AEE450E008ACF09 /* FileFactory.swift in Sources */,
 				ADA740881AEA1F0700966518 /* File.swift in Sources */,
 				ADA7408C1AEA1F0700966518 /* FileXML.swift in Sources */,
 			);
