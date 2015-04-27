@@ -67,7 +67,7 @@ class KeyExtractorTests: XCTestCase {
     
     func testFileXML() {
         
-        let path = "/Library/ApplicationSupport/Adobe/AdobePhotoshopCS6/AMT_Driver/application.xml"
+       /* let path = "/Library/ApplicationSupport/Adobe/AdobePhotoshopCS6/AMT_Driver/application.xml"
         XCTAssertNotNil(path,"problème d'initialisation du path")
         
         let fileXML : FileXML
@@ -81,9 +81,43 @@ class KeyExtractorTests: XCTestCase {
         XCTAssertEqual(fileXML.path, path, "problème le path du fichier plist différent du path donné")
         
         XCTAssertNotNil(fileXML.xmlParser,"problème d'initialisation du dictionary pour le fichier xml")
-
+    */
         //fileXML.parser(fileXML.xmlParser, foundCharacters: key)
     }
 
+    func testFileFactory(){
+        
+        let pathWithoutNamePlist = "/Library/Preferences"
+        let namePlist = "com.microsoft.office.licensing"
+        let extPlist = "plist"
+        
+        XCTAssertNotNil(pathWithoutNamePlist,"problème d'initialisation du path")
+        XCTAssertNotNil(namePlist,"problème d'initialisation du nom")
+        XCTAssertNotNil(extPlist,"problème d'initialisation de l'extension")
+        
+        let filePlist: File
+        filePlist = FileFactory.createFile(pathWithoutNamePlist, name: namePlist, ext: extPlist)!
+        
+        println(filePlist)
+        let key = filePlist.findValue("sequence")
+        
+        /////////////////////////////////////////////////////////////////////////////////////////
+        
+        let pathWithoutName = "/Library/ApplicationSupport/Adobe/AdobePhotoshopCS6/AMT_Driver"
+        let name = "application"
+        let ext = "xml"
+    
+        XCTAssertNotNil(pathWithoutName,"problème d'initialisation du path")
+        XCTAssertNotNil(name,"problème d'initialisation du nom")
+        XCTAssertNotNil(ext,"problème d'initialisation de l'extension")
+        /*
+        let file: File
+        file = FileFactory.createFile(pathWithoutName, name: name, ext: ext)!
+        
+        println(file)
+        file.findValue("PayloadCode")
+        */
+        /////////////////////////////////////////////////////////////////////////////////////////
+    }
     
 }
