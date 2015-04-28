@@ -44,6 +44,7 @@ class FilePlist: File {
             return "\(value)"
 
         }
+        NSException(name: "Nil File", reason: "The file isn't initialized (nil)", userInfo: nil)
         return nil
     }
     
@@ -57,6 +58,7 @@ class FilePlist: File {
             return dictionaryTemp
             
         }
+        NSException(name: "Nil File", reason: "The file isn't initialized (nil)", userInfo: nil)
         return nil
     }
 
