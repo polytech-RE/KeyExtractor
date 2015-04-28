@@ -15,16 +15,25 @@ class FileFactory {
         let path: String
         path = pathWithoutName + "/" + name + "." + ext
 
-        switch ext{
-            case "xml":
-                return FileXML(path: path)
-            case "plist":
-                return FilePlist(path: path)
+        var checkValidation = NSFileManager.defaultManager()
+        
+        if(checkValidation.fileExistsAtPath(path)){
             
-            default:
-                NSException(name: "extension", reason: "the extension isn't implemented", userInfo: nil)
-                return nil
+            switch ext{
+                case "xml":
+                    return FileXML(path: path)
+                case "plist":
+                    return FilePlist(path: path)
+            
+                default:
+                    NSException(name: "extension", reason: "the extension isn't implemented", userInfo: nil)
+                    return nil
+            }
         }
-
+        else{
+            NSLog("Path not correct")
+            NSException(name: "file not exists", reason: "the path isn't correct", userInfo: nil)
+            return nil
+        }
     }
 }
