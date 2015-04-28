@@ -14,15 +14,18 @@ class FileFactory {
     
         let path: String
         path = pathWithoutName + "/" + name + "." + ext
-        
+
         switch ext{
             case "xml":
                 return FileXML(path: path)
             case "plist":
                 return FilePlist(path: path)
+            
             default:
                 NSException(name: "extension", reason: "the extension isn't implemented", userInfo: nil)
                 return nil
         }
+
+        return nil;
     }
 }

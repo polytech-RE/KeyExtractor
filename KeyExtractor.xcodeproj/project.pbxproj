@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6F7F822E1AEE26F70033B834 /* FileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F822D1AEE26F70033B834 /* FileFactory.swift */; };
+		6F7F82301AEE906B0033B834 /* myXMLParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F822F1AEE906B0033B834 /* myXMLParserDelegate.swift */; };
+		6F7F82311AEE906B0033B834 /* myXMLParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F822F1AEE906B0033B834 /* myXMLParserDelegate.swift */; };
 		6FEADC141AE91DE700469EEC /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC131AE91DE700469EEC /* Launcher.swift */; };
 		6FEADC151AE91DE700469EEC /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC131AE91DE700469EEC /* Launcher.swift */; };
 		AD0C13511AEE450E008ACF09 /* FileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F822D1AEE26F70033B834 /* FileFactory.swift */; };
@@ -47,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		6F7F822D1AEE26F70033B834 /* FileFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileFactory.swift; sourceTree = "<group>"; };
+		6F7F822F1AEE906B0033B834 /* myXMLParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myXMLParserDelegate.swift; sourceTree = "<group>"; };
 		6FEADC131AE91DE700469EEC /* Launcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		ADA279481AE7CC01005D8F88 /* KeyExtractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyExtractor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				6F7F822D1AEE26F70033B834 /* FileFactory.swift */,
+				6F7F822F1AEE906B0033B834 /* myXMLParserDelegate.swift */,
 			);
 			path = TechnicalClasses;
 			sourceTree = "<group>";
@@ -305,6 +309,7 @@
 				ADA740871AEA1F0700966518 /* File.swift in Sources */,
 				ADA2794E1AE7CC01005D8F88 /* AppDelegate.swift in Sources */,
 				ADA7409C1AEA1F2100966518 /* Logger.swift in Sources */,
+				6F7F82301AEE906B0033B834 /* myXMLParserDelegate.swift in Sources */,
 				6F7F822E1AEE26F70033B834 /* FileFactory.swift in Sources */,
 				6FEADC141AE91DE700469EEC /* Launcher.swift in Sources */,
 				ADA7409A1AEA1F2100966518 /* FileImporter.swift in Sources */,
@@ -321,6 +326,7 @@
 				ADA279611AE7CC01005D8F88 /* KeyExtractorTests.swift in Sources */,
 				ADA7409D1AEA1F2100966518 /* Logger.swift in Sources */,
 				ADA740A11AEA1F2100966518 /* ViewController.swift in Sources */,
+				6F7F82311AEE906B0033B834 /* myXMLParserDelegate.swift in Sources */,
 				ADA7409B1AEA1F2100966518 /* FileImporter.swift in Sources */,
 				ADA740901AEA1F0700966518 /* SoftwareKey.swift in Sources */,
 				AD0C13511AEE450E008ACF09 /* FileFactory.swift in Sources */,
