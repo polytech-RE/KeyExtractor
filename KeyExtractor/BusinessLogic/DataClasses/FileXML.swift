@@ -30,6 +30,7 @@ class FileXML: NSObject, File ,NSXMLParserDelegate {
     init(path: String){
         self.path = path
         let data: NSData = NSData(contentsOfFile: path)!
+        //TODO mettre une exception pour le Data
         self.licence = String()
         self.elementName = String()
         self.xmlParser = NSXMLParser(data: data)
