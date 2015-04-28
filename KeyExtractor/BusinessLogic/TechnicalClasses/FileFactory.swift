@@ -26,6 +26,5 @@ class FileFactory {
                 return nil
         }
 
-        return nil;
     }
 }
