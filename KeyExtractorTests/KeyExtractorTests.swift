@@ -66,17 +66,17 @@ class KeyExtractorTests: XCTestCase {
     
     func testFileXML() {
         
-        let path = "/Library/ApplicationSupport/Adobe/AdobePhotoshopCS6/AMT_Driver/application.xml"
+        let path = "/Library/Application Support/Adobe/Adobe Photoshop CS6/AMT_Driver/application.xml"
         //let path = "/Users/polytech/Desktop/application.xml"
         
         XCTAssertNotNil(path,"problème d'initialisation du path")
         println("ok")
         
-        /*let data: NSData = NSData(contentsOfFile: path)!
+        let data: NSData = NSData(contentsOfFile: path)!
         println("\(data)")
         let str = NSString(data: data, encoding: NSUTF8StringEncoding)
         println("\(str)")
-        */
+        
         
         let fileXML : FileXML
         fileXML = FileXML(path: path)
