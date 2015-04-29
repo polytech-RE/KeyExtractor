@@ -15,7 +15,7 @@ class Software {
     private var InstallLocation: String
     private var version : String
     
-    private var keys: Set<SoftwareKey> //Set<SoftwareKey>
+    //private var keys: Set<SoftwareKey> //Set<SoftwareKey>
     
     /*
     The licence key (ex 'AAA-BBBB-CCCCC-EEEEE')
@@ -42,7 +42,7 @@ class Software {
         self.key = key
         self.keyRegistryPath = keyRegistryPath
         self.keyRegistryValue = keyRegistryValue
-        self.keys = Set()
+        //self.keys = Set()
         self.InstallLocation = String()
     }
     
@@ -50,7 +50,8 @@ class Software {
     * Return true if and only if at least one key is associated to the soft
     */
     func HasKey() -> Bool {
-        return !keys.isEmpty
+        //return !keys.isEmpty
+        return true
     }
     /*
     /**
