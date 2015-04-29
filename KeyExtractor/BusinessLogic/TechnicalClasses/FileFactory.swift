@@ -10,22 +10,30 @@ import Foundation
 
 class FileFactory {
 
-    static func createFile(PathWithoutName: String, name: String, ext: String) -> File?{
+    static func createFile(pathWithoutName: String, name: String, ext: String) -> File?{
     
         let path: String
-        path = PathWithoutName + name + ext
-        /*
-        switch ext{
+        path = pathWithoutName + "/" + name + "." + ext
+        
+        var checkValidation = NSFileManager.defaultManager()
+        
+        if(checkValidation.fileExistsAtPath(path)){
+            
+            switch ext{
             case "xml":
                 return FileXML(path: path)
-            case "plist:":
+            case "plist":
                 return FilePlist(path: path)
-            
+                
             default:
-                NSLog("probleme the format isn't implemented")
-                //TODO Exception
+                NSException(name: "extension", reason: "the extension isn't implemented", userInfo: nil)
+                return nil
+            }
         }
-        */
-        return nil;
+        else{
+            NSLog("Path not correct")
+            NSException(name: "file not exists", reason: "the path isn't correct", userInfo: nil)
+            return nil
+        }
     }
 }
