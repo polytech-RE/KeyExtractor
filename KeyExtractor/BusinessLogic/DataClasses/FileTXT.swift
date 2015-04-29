@@ -26,17 +26,20 @@ class FileTXT: File {
         self.path = path
         var err: NSError? = NSError()
         self.content = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: &err)
+        println(self.content)
     }
     
     //functions
 
     func findValue(key: String) -> String? {
         
-        if ( self.content != nil ){
-            self.content?.rangeOfString(key)
-        }
-        NSException(name: "Nil File", reason: "The file isn't initialized (nil)", userInfo: nil)
-        return nil
+        return nil;
+    }
+    
+    /*return true if the content isn't nil*/
+    func contentNotNil() -> Bool {
+        
+        return self.content != nil;
     }
     
 }
