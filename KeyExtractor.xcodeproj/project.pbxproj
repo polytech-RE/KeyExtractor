@@ -12,6 +12,11 @@
 		6F7F82311AEE906B0033B834 /* myXMLParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F822F1AEE906B0033B834 /* myXMLParserDelegate.swift */; };
 		6FEADC141AE91DE700469EEC /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC131AE91DE700469EEC /* Launcher.swift */; };
 		6FEADC151AE91DE700469EEC /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEADC131AE91DE700469EEC /* Launcher.swift */; };
+		AD0C13511AEE450E008ACF09 /* FileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F822D1AEE26F70033B834 /* FileFactory.swift */; };
+		AD137A401AEF7402001B9D3B /* SoftwareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD137A3F1AEF7402001B9D3B /* SoftwareManager.swift */; };
+		AD137A411AEF7402001B9D3B /* SoftwareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD137A3F1AEF7402001B9D3B /* SoftwareManager.swift */; };
+		AD137A431AEF8C0C001B9D3B /* FileTXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD137A421AEF8C0C001B9D3B /* FileTXT.swift */; };
+		AD137A441AEF8C0C001B9D3B /* FileTXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD137A421AEF8C0C001B9D3B /* FileTXT.swift */; };
 		ADA2794E1AE7CC01005D8F88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */; };
 		ADA279521AE7CC01005D8F88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA279511AE7CC01005D8F88 /* Images.xcassets */; };
 		ADA279551AE7CC01005D8F88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA279531AE7CC01005D8F88 /* Main.storyboard */; };
@@ -50,6 +55,8 @@
 		6F7F822D1AEE26F70033B834 /* FileFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileFactory.swift; sourceTree = "<group>"; };
 		6F7F822F1AEE906B0033B834 /* myXMLParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myXMLParserDelegate.swift; sourceTree = "<group>"; };
 		6FEADC131AE91DE700469EEC /* Launcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
+		AD137A3F1AEF7402001B9D3B /* SoftwareManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareManager.swift; sourceTree = "<group>"; };
+		AD137A421AEF8C0C001B9D3B /* FileTXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTXT.swift; sourceTree = "<group>"; };
 		ADA279481AE7CC01005D8F88 /* KeyExtractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyExtractor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADA279511AE7CC01005D8F88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -62,7 +69,7 @@
 		ADA740821AEA1F0700966518 /* FileXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileXML.swift; sourceTree = "<group>"; };
 		ADA740831AEA1F0700966518 /* Software.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Software.swift; sourceTree = "<group>"; };
 		ADA740841AEA1F0700966518 /* SoftwareKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareKey.swift; sourceTree = "<group>"; };
-		ADA740941AEA1F2100966518 /* FileImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileImporter.swift; sourceTree = "<group>"; };
+		ADA740941AEA1F2100966518 /* FileImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileImporter.swift; path = ../../Communication/FileImporter.swift; sourceTree = "<group>"; };
 		ADA740951AEA1F2100966518 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		ADA740991AEA1F2100966518 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ADA740A21AEA4CC200966518 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = KeyExtractor/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -158,6 +165,7 @@
 				ADA740801AEA1F0700966518 /* File.swift */,
 				ADA740811AEA1F0700966518 /* FilePlist.swift */,
 				ADA740821AEA1F0700966518 /* FileXML.swift */,
+				AD137A421AEF8C0C001B9D3B /* FileTXT.swift */,
 				ADA740831AEA1F0700966518 /* Software.swift */,
 				ADA740841AEA1F0700966518 /* SoftwareKey.swift */,
 			);
@@ -167,8 +175,10 @@
 		ADA740851AEA1F0700966518 /* TechnicalClasses */ = {
 			isa = PBXGroup;
 			children = (
+				ADA740941AEA1F2100966518 /* FileImporter.swift */,
 				6F7F822D1AEE26F70033B834 /* FileFactory.swift */,
 				6F7F822F1AEE906B0033B834 /* myXMLParserDelegate.swift */,
+				AD137A3F1AEF7402001B9D3B /* SoftwareManager.swift */,
 			);
 			path = TechnicalClasses;
 			sourceTree = "<group>";
@@ -176,7 +186,6 @@
 		ADA740931AEA1F2100966518 /* Communication */ = {
 			isa = PBXGroup;
 			children = (
-				ADA740941AEA1F2100966518 /* FileImporter.swift */,
 				ADA740951AEA1F2100966518 /* Logger.swift */,
 			);
 			path = Communication;
@@ -304,10 +313,12 @@
 				ADA7408D1AEA1F0700966518 /* Software.swift in Sources */,
 				ADA740A01AEA1F2100966518 /* ViewController.swift in Sources */,
 				ADA7408B1AEA1F0700966518 /* FileXML.swift in Sources */,
+				AD137A431AEF8C0C001B9D3B /* FileTXT.swift in Sources */,
 				ADA7408F1AEA1F0700966518 /* SoftwareKey.swift in Sources */,
 				ADA740871AEA1F0700966518 /* File.swift in Sources */,
 				ADA2794E1AE7CC01005D8F88 /* AppDelegate.swift in Sources */,
 				ADA7409C1AEA1F2100966518 /* Logger.swift in Sources */,
+				AD137A401AEF7402001B9D3B /* SoftwareManager.swift in Sources */,
 				6F7F82301AEE906B0033B834 /* myXMLParserDelegate.swift in Sources */,
 				6F7F822E1AEE26F70033B834 /* FileFactory.swift in Sources */,
 				6FEADC141AE91DE700469EEC /* Launcher.swift in Sources */,
@@ -323,11 +334,14 @@
 				6FEADC151AE91DE700469EEC /* Launcher.swift in Sources */,
 				ADA7408A1AEA1F0700966518 /* FilePlist.swift in Sources */,
 				ADA279611AE7CC01005D8F88 /* KeyExtractorTests.swift in Sources */,
+				AD137A441AEF8C0C001B9D3B /* FileTXT.swift in Sources */,
 				ADA7409D1AEA1F2100966518 /* Logger.swift in Sources */,
 				ADA740A11AEA1F2100966518 /* ViewController.swift in Sources */,
 				6F7F82311AEE906B0033B834 /* myXMLParserDelegate.swift in Sources */,
 				ADA7409B1AEA1F2100966518 /* FileImporter.swift in Sources */,
+				AD137A411AEF7402001B9D3B /* SoftwareManager.swift in Sources */,
 				ADA740901AEA1F0700966518 /* SoftwareKey.swift in Sources */,
+				AD0C13511AEE450E008ACF09 /* FileFactory.swift in Sources */,
 				ADA740881AEA1F0700966518 /* File.swift in Sources */,
 				ADA7408C1AEA1F0700966518 /* FileXML.swift in Sources */,
 			);

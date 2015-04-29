@@ -67,8 +67,11 @@ class KeyExtractorTests: XCTestCase {
     func testFileXML() {
         
 <<<<<<< HEAD
+<<<<<<< HEAD
        
 =======
+=======
+>>>>>>> origin/master
        /* let path = "/Library/ApplicationSupport/Adobe/AdobePhotoshopCS6/AMT_Driver/application.xml"
         println("coucou")
         
@@ -108,6 +111,9 @@ class KeyExtractorTests: XCTestCase {
         
         let key: String = "PayloadCode"
         */
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
     }
 

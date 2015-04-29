@@ -22,7 +22,19 @@ class FileXML: NSObject, File, NSXMLParserDelegate{
     init(path:String){
         self.currentValue = String()
         self.path = path
+
         self.licence = String()
+<<<<<<< HEAD
+=======
+        self.elementName = String()
+        
+        let data: NSData = NSData(contentsOfFile: path)!
+        //TODO mettre une exception pour le Data
+        
+        self.xmlParser = NSXMLParser(data: data)
+        self.xmlParser.delegate = myXMLParserDelegate(path: path)
+        self.xmlParser.parse()
+>>>>>>> origin/master
     }
     
     func findValue(key: String) -> String? {
