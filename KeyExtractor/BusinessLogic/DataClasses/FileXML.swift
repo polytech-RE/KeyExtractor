@@ -36,6 +36,5 @@ class FileXML: NSObject, File{
     func findValue(key: String) -> String? {
         return ""
     }
-    
 
 }

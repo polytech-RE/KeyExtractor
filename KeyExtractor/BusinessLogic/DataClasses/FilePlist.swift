@@ -61,7 +61,5 @@ class FilePlist: File {
         NSException(name: "Nil File", reason: "The file isn't initialized (nil)", userInfo: nil)
         return nil
     }
-
-    
         
 }

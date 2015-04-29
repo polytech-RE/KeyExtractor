@@ -21,6 +21,4 @@ protocol File{
     
     func findValue(String) -> String?
     
-    func contentNotNil() -> Bool
-    
 }
