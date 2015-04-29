@@ -89,6 +89,24 @@ class KeyExtractorTests: XCTestCase {
         let key: String = "PayloadCode"
         */
     }
+    
+    func testFileTXT(){
+        let path =  "/Users/remy/Documents/LINXYA/trunk/linxya_key_extractor/ways.txt"
+        XCTAssertNotNil(path,"problème d'initialisation du path")
+        
+        let fileTXT : FileTXT
+        fileTXT = FileTXT(path: path)
+        
+        XCTAssertNotNil(fileTXT,"problème du fichier txt")
+        
+        XCTAssertNotNil(fileTXT.path,"problème d'initialisation du path pour le fichier txt")
+        XCTAssertEqual(fileTXT.path, path, "problème le path du fichier plist différent du path donné")
+        
+        XCTAssertNotNil(fileTXT.content,"problème d'initialisation du dictionary pour le fichier txt")
+        
+        fileTXT.findValue("//")
+        
+    }
 
     func testFileFactory(){
         
@@ -125,4 +143,9 @@ class KeyExtractorTests: XCTestCase {
         /////////////////////////////////////////////////////////////////////////////////////////
     }
     
+    
+    func testSoftwareManager(){
+        let softwareManager: SoftwareManager = SoftwareManager()
+        softwareManager.test()
+    }
 }
