@@ -32,7 +32,7 @@ class KeyExtractorTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    /*func testFilePlist() {
+    func testFilePlist() {
         
         let path = "/Library/Preferences/com.microsoft.office.licensing.plist"
         XCTAssertNotNil(path,"problème d'initialisation du path")
@@ -62,32 +62,36 @@ class KeyExtractorTests: XCTestCase {
         stringValue = filePlist.findValue("toto")
         XCTAssertNil(stringValue, "une valeur est associée à la clé")
         
-    }*/
+    }
     
     func testFileXML() {
         
-       /* let path = "/Library/ApplicationSupport/Adobe/AdobePhotoshopCS6/AMT_Driver/application.xml"
-        println("coucou")
-        
-        let path = "/Desktop/application.xml"
+        let path = "/Library/ApplicationSupport/Adobe/AdobePhotoshopCS6/AMT_Driver/application.xml"
+        //let path = "/Users/polytech/Desktop/application.xml"
         
         XCTAssertNotNil(path,"problème d'initialisation du path")
+        println("ok")
+        
+        /*let data: NSData = NSData(contentsOfFile: path)!
+        println("\(data)")
+        let str = NSString(data: data, encoding: NSUTF8StringEncoding)
+        println("\(str)")
+        */
         
         let fileXML : FileXML
         fileXML = FileXML(path: path)
-       
+        fileXML.startParsing()
+        println("FOUND KEY : \(fileXML.licence)")
+        
         XCTAssertNotNil(fileXML,"problème du fichier XML")
-        
+        println("ok1")
         XCTAssertNotNil(fileXML.path,"problème d'initialisation du path pour le fichier xml")
+        println("ok2")
         XCTAssertEqual(fileXML.path, path, "problème le path du fichier plist différent du path donné")
-        
-        XCTAssertNotNil(fileXML.xmlParser,"problème d'initialisation du dictionary pour le fichier xml")
-
-        //fileXML.parser(fileXML.xmlParser, foundCharacters: key)
-
+        println("ok3")
         
         let key: String = "PayloadCode"
-        */
+
     }
     
     func testFileTXT(){

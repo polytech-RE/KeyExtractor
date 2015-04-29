@@ -8,33 +8,48 @@
 
 import Foundation
 
-class FileXML: NSObject, File{
+class FileXML: NSObject, File, NSXMLParserDelegate{
     
     let path: String
-    let xmlParser : NSXMLParser
-    var elementName: String
-    var licence: String
+    var licence: String?
+    var currentKey: AnyObject?
+    var currentValue: String
     
     
     /*  Initialize the Abstract object File
     with the path
     */
-    init(path: String){
+    init(path:String){
+        self.currentValue = String()
         self.path = path
 
         self.licence = String()
-        self.elementName = String()
-        
-        let data: NSData = NSData(contentsOfFile: path)!
-        //TODO mettre une exception pour le Data
-        
-        self.xmlParser = NSXMLParser(data: data)
-        self.xmlParser.delegate = myXMLParserDelegate(path: path)
-        self.xmlParser.parse()
     }
     
     func findValue(key: String) -> String? {
         return ""
     }
-
+    
+    func startParsing(){
+            let data: NSData = NSData(contentsOfFile: path)!
+            var objNSXMLParser = NSXMLParser(data: data)
+            objNSXMLParser.delegate = self
+            objNSXMLParser.parse()
+    }
+    
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
+        println("Element's name is \(elementName)")
+        println("Element's attributes are \(attributeDict)")
+        currentKey=attributeDict.values.first
+        println(currentKey)
+        println("\(currentKey)")
+    }
+    
+    func parser(parser: NSXMLParser, foundCharacters string: String?) {
+        if "\(currentKey)"=="Optional(PayloadCode)"{
+            currentValue += string ?? String()
+            let newValue = currentValue.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            licence = newValue == String() ? nil : newValue
+        }
+    }
 }

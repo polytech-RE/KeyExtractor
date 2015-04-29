@@ -15,7 +15,7 @@ import Foundation
     la cle.
 */
 
-class SoftwareKey: NSObject{
+class SoftwareKey{
     
     /*  
         The key Value
