@@ -10,56 +10,49 @@ import Foundation
 
 class SoftwareManager {
     
-    /*private let pathListFile: String
+    private let pathListFile: String
+    private var softwareList: [Software]
     
-    
-    func test()-> Software{
-    
-        var pathWithoutNameFile: String
-        var namefile: String
-        var extensionFile: String
-    
+    init(){
         
-        let file: File?
-        file = FileFactory.createFile(pathWithoutNameFile, name: namefile, ext: extensionFile)
-    
-        let key = file?.findValue("sequence")
+        self.pathListFile = "/Users/remy/Documents/LINXYA/trunk/linxya_key_extractor/ways.txt"
+        self.softwareList = [Software]()
+        
     }
-    */
     
-    static func loadDictionary(fileName: String, dictionary: NSDictionary<string, Software>) -> NSDictionary<string, Software>
-    {
-        foreach (String s in ways){
-            if (s.Trim().StartsWith("//"))
-                continue; // Skip commented lines
+    func test()-> Software? {
     
-                String[] d = s.Split(';');
-                if (d.Length >= 5){
-                    int registryRoot = int.Parse(d[0]); // TODO : implement logic to read in different registry root (0 is HKEY LOCAL MACHINE)
-                    String softwareName = d[1];
-    String version = d[2];
-    String registryPath = d[3];
-    String registryValue = d[4];
-    String registryLicenceUsernamePath = d.Length >= 6 ? d[5] : "";    // TODO : implement this LATER
-    String registryLicenceUsernameValue = d.Length >= 7 ? d[6] : "";    // TODO : implement this LATER
-    
-    
-    String softwareIdentifier = softwareName + " - " + version;
-    
-    Software software = new Software(softwareIdentifier, softwareName, "", "", version, registryRoot, registryPath, registryValue, registryLicenceUsernamePath, registryLicenceUsernameValue);
-    
-    //  PathValue p = new PathValue(registryPath, registryValue);
-    //La namedValue a pour nom le logiciel, et pour value la version.
-    
-    Logger.Log("Ways", "Found new signature " + softwareIdentifier);
-    Logger.Log("Ways", "==> Path " + registryPath);
-    Logger.Log("Ways", "==> Value " + softwareIdentifier);
-    dictionary.Add(softwareIdentifier, software);
-    }
-}
-Logger.Log("Ways", "Found " + dictionary.Keys.Count + " signature(s)");
+        let file: FileTXT?
+        file = FileTXT(path: pathListFile)
+        
+        if ( file!.contentNotNil() ){
+            
+            //split the file with the new line character
+            let separatedline = split(file!.content!, allowEmptySlices: false,  isSeparator: {(c:Character)->Bool in return c=="\r\n"})
+        
+            for line in separatedline {
+                
+                //split the file with the character ;
+                // the file is formated as softwareName;version;
+                let separatedsemicolon = split(file!.content!, allowEmptySlices: false,  isSeparator: {(c:Character)->Bool in return c=="\r\n"})
+                
+                //create the software with the information
+                
+                let software :Software
+                software = Software(name: separatedsemicolon[0] , vendor: "", version: "", computerName: "", userName: "", key: "", keyRegistryPath: separatedsemicolon[1] , keyRegistryValue: "")
+                
+                //TODO: recherche des autres informations dans /APP
+                
+                softwareList.append(software)
+                
+            }
+            
+            /*let separated2 = self.content!.componentsSeparatedByString(key)*/
+        }
 
-return dictionary;
-}
+        NSException(name: "Nil File", reason: "The file isn't initialized (nil)", userInfo: nil)
+        return nil
+    }
+    
 
 }
