@@ -15,12 +15,14 @@ class SoftwareManager {
     
     init(){
         
-        self.pathListFile = "/Users/remy/Documents/LINXYA/trunk/linxya_key_extractor/ways.txt"
+        self.pathListFile = "/Users/remy/Desktop/ways.txt"
         self.softwareList = [Software]()
         
     }
     
-    func test()-> Software? {
+    
+    /*This function allows to find the software present in the file txt */
+    func fileSeek()-> Software? {
     
         let file: FileTXT?
         file = FileTXT(path: pathListFile)
@@ -28,20 +30,22 @@ class SoftwareManager {
         if ( file!.contentNotNil() ){
             
             //split the file with the new line character
-            let separatedline = split(file!.content!, allowEmptySlices: false,  isSeparator: {(c:Character)->Bool in return c=="\r\n"})
-        
+            let separatedline = split(file!.content!, allowEmptySlices: false,  isSeparator: {(c:Character)->Bool in return c=="\n"})
+            
             for line in separatedline {
                 
                 //split the file with the character ;
-                // the file is formated as softwareName;version;
-                let separatedsemicolon = split(file!.content!, allowEmptySlices: false,  isSeparator: {(c:Character)->Bool in return c=="\r\n"})
+                // the file is formated as softwareName;licenceFile;infoFile
+                let separatedsemicolon = split(file!.content!, allowEmptySlices: false,  isSeparator: {(c:Character)->Bool in return c==";"})
                 
+                println("separated line")
+                println(separatedsemicolon)
                 //create the software with the information
+                
+                //TODO: recherche des autres informations dans /APP
                 
                 let software :Software
                 software = Software(name: separatedsemicolon[0] , vendor: "", version: "", computerName: "", userName: "", key: "", keyRegistryPath: separatedsemicolon[1] , keyRegistryValue: "")
-                
-                //TODO: recherche des autres informations dans /APP
                 
                 softwareList.append(software)
                 
@@ -54,5 +58,13 @@ class SoftwareManager {
         return nil
     }
     
+    /*  This function alows to find all the software
+        with licence in  the basic folder (maybe
+        /Library/Preferences)
+    */
+    func autoSeek()-> Software? {
+    
+        return nil
+    }
 
 }
