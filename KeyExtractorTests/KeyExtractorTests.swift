@@ -174,7 +174,7 @@ class KeyExtractorTests: XCTestCase {
     
     
     func testSoftwareManager(){
-        //let softwareManager: SoftwareManager = SoftwareManager()
-        //softwareManager.test()
+        let softwareManager: SoftwareManager = SoftwareManager()
+        softwareManager.fileSeek()
     }
 }
