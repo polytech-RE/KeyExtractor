@@ -38,20 +38,34 @@ class SoftwareManager {
                 // the file is formated as softwareName;licenceFile;infoFile
                 let separatedsemicolon = split(file!.content!, allowEmptySlices: false,  isSeparator: {(c:Character)->Bool in return c==";"})
                 
-                println("separated line")
-                println(separatedsemicolon)
+                let softwareName: String
+                let softwareLicenceFilePath: String
+                let softwareInfoFilePath: String
+                let softwareVersion: String?
+                
+                //TODO try and cath pour lever l'erreur lorsque le fichier est mal rempli
+                softwareName = separatedsemicolon[0]
+                softwareLicenceFilePath = separatedsemicolon[1]
+                softwareInfoFilePath = separatedsemicolon[2]
+                
                 //create the software with the information
                 
-                //TODO: recherche des autres informations dans /APP
+                let fileInfo: FilePlist?
+                fileInfo = FilePlist(path: softwareInfoFilePath)
                 
+                softwareVersion = fileInfo?.findValue("CFBundleShortVersionString")
+                fileInfo?.findValue("FBundleVersion")
+                fileInfo?.findValue("NSHumanReadableCopyright")
+                
+                println("version")
+                println(softwareVersion)
+
                 let software :Software
-                software = Software(name: separatedsemicolon[0] , vendor: "", version: "", computerName: "", userName: "", key: "", keyRegistryPath: separatedsemicolon[1] , keyRegistryValue: "")
+                software = Software(name: softwareName , vendor: "", version: "", computerName: "", userName: "", key: "", keyRegistryPath: "" , keyRegistryValue: "")
                 
                 softwareList.append(software)
                 
             }
-            
-            /*let separated2 = self.content!.componentsSeparatedByString(key)*/
         }
 
         NSException(name: "Nil File", reason: "The file isn't initialized (nil)", userInfo: nil)
