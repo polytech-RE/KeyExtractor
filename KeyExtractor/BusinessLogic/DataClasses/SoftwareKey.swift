@@ -13,6 +13,9 @@ import Foundation
     avec une valeur et un poids.
     Ce poids est affecte en fonction de la forme de 
     la cle.
+    Cette classe sert lors de la recherche automatisée,
+    elle permet de pondérer les "cles" trouver dans
+    les fichiers
 */
 
 class SoftwareKey{
@@ -33,5 +36,13 @@ class SoftwareKey{
     init (key: String, weight: Int){
         self.key = key
         self.weight = weight
+    }
+    
+    public func getKey() -> String {
+        return self.key
+    }
+    
+    public func getWeight() -> Int {
+        return self.weight
     }
 }
