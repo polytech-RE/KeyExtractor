@@ -66,16 +66,17 @@ class KeyExtractorTests: XCTestCase {
     
     func testFileXML() {
         
-        let path = "/Library/Application Support/Adobe/Adobe Photoshop CS6/AMT_Driver/application.xml"
+        //let path = "/Library/Application Support/Adobe/Adobe Photoshop CS6/AMT_Driver/application.xml"
+        let path = "/Users/remy/Desktop/Lightroom 5.0 Registration.xml"
+        //let path = "/Users/remy/Desktop/application.xml"
         //let path = "/Users/polytech/Desktop/application.xml"
         
         XCTAssertNotNil(path,"problème d'initialisation du path")
-        println("ok")
         
         let data: NSData = NSData(contentsOfFile: path)!
-        println("\(data)")
+        //println("\(data)")
         let str = NSString(data: data, encoding: NSUTF8StringEncoding)
-        println("\(str)")
+        //println("\(str)")
         
         
         let fileXML : FileXML
@@ -84,17 +85,14 @@ class KeyExtractorTests: XCTestCase {
         println("FOUND KEY : \(fileXML.licence)")
         
         XCTAssertNotNil(fileXML,"problème du fichier XML")
-        println("ok1")
         XCTAssertNotNil(fileXML.path,"problème d'initialisation du path pour le fichier xml")
-        println("ok2")
         XCTAssertEqual(fileXML.path, path, "problème le path du fichier plist différent du path donné")
-        println("ok3")
         
-        let key: String = "PayloadCode"
+        let key: String = "serial_number"
 
     }
     
-    func testFileTXT(){
+    func testFileWays(){
         let path =  "/Users/remy/Documents/LINXYA/trunk/linxya_key_extractor/ways.txt"
         XCTAssertNotNil(path,"problème d'initialisation du path")
         
@@ -108,7 +106,34 @@ class KeyExtractorTests: XCTestCase {
         
         XCTAssertNotNil(fileTXT.content,"problème d'initialisation du dictionary pour le fichier txt")
         
-        fileTXT.findValue("//")
+    }
+    
+    func testFileTXT(){
+        let path =  "/Users/remy/Desktop/license-fusion-70-e3-201404"
+        //TODO gerer le problem pour l'extension
+        
+        XCTAssertNotNil(path,"problème d'initialisation du path")
+        
+        let fileTXT : FileTXT
+        fileTXT = FileTXT(path: path)
+        
+        XCTAssertNotNil(fileTXT,"problème du fichier txt")
+        
+        XCTAssertNotNil(fileTXT.path,"problème d'initialisation du path pour le fichier txt")
+        XCTAssertEqual(fileTXT.path, path, "problème le path du fichier txt différent du path donné")
+        
+        XCTAssertNotNil(fileTXT.content,"problème d'initialisation du content pour le fichier txt")
+        
+        let key = "Serial"
+        
+        var stringValue: String?
+        stringValue = fileTXT.findValue(key)
+        XCTAssertNotNil(stringValue, "aucune valeur n'est associé à la clé")
+        println("ma clé")
+        println(stringValue)
+        
+        stringValue = fileTXT.findValue("toto")
+        XCTAssertNil(stringValue, "une valeur est associée à la clé")
         
     }
 
@@ -149,7 +174,7 @@ class KeyExtractorTests: XCTestCase {
     
     
     func testSoftwareManager(){
-        let softwareManager: SoftwareManager = SoftwareManager()
-        softwareManager.test()
+        //let softwareManager: SoftwareManager = SoftwareManager()
+        //softwareManager.test()
     }
 }
