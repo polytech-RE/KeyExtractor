@@ -110,9 +110,10 @@ class KeyExtractorTests: XCTestCase {
     
     func testFileTXT(){
         let path =  "/Users/remy/Desktop/license-fusion-70-e3-201404"
-        //TODO gerer le problem pour l'extension
+        let format = "txt"
         
         XCTAssertNotNil(path,"problème d'initialisation du path")
+        XCTAssertNotNil(format,"problème d'initialisation du format")
         
         let fileTXT : FileTXT
         fileTXT = FileTXT(path: path)
@@ -139,32 +140,28 @@ class KeyExtractorTests: XCTestCase {
 
     func testFileFactory(){
         
-        let pathWithoutNamePlist = "/Library/Preferences"
-        let namePlist = "com.microsoft.office.licensing"
-        let extPlist = "plist"
+        let pathPlist = "/Library/Preferences/com.microsoft.office.licensing.plist"
+        let formatPlist = "plist"
         
-        XCTAssertNotNil(pathWithoutNamePlist,"problème d'initialisation du path")
-        XCTAssertNotNil(namePlist,"problème d'initialisation du nom")
-        XCTAssertNotNil(extPlist,"problème d'initialisation de l'extension")
+        XCTAssertNotNil(pathPlist,"problème d'initialisation du path")
+        XCTAssertNotNil(formatPlist,"problème d'initialisation du format")
         
         let filePlist: File
-        filePlist = FileFactory.createFile(pathWithoutNamePlist, name: namePlist, ext: extPlist)!
+        filePlist = FileFactory.createFile(pathPlist, format: formatPlist)!
         
         println(filePlist)
         let key = filePlist.findValue("sequence")
         
         /////////////////////////////////////////////////////////////////////////////////////////
         
-        let pathWithoutName = "/Library/ApplicationSupport/Adobe/AdobePhotoshopCS6/AMT_Driver"
-        let name = "application"
-        let ext = "xml"
+        let path = "/Library/ApplicationSupport/Adobe/AdobePhotoshopCS6/AMT_Driver/application.xml"
+        let format = "xml"
     
-        XCTAssertNotNil(pathWithoutName,"problème d'initialisation du path")
-        XCTAssertNotNil(name,"problème d'initialisation du nom")
-        XCTAssertNotNil(ext,"problème d'initialisation de l'extension")
+        XCTAssertNotNil(path,"problème d'initialisation du path")
+        XCTAssertNotNil(format,"problème d'initialisation du format")
         /*
         let file: File
-        file = FileFactory.createFile(pathWithoutName, name: name, ext: ext)!
+        file = FileFactory.createFile(path, format: format)!
         
         println(file)
         file.findValue("PayloadCode")

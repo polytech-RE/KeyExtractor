@@ -36,32 +36,54 @@ class SoftwareManager {
                 
                 //split the file with the character ;
                 // the file is formated as softwareName;licenceFile;infoFile
-                let separatedsemicolon = split(file!.content!, allowEmptySlices: false,  isSeparator: {(c:Character)->Bool in return c==";"})
+                let separatedsemicolon = split(line, allowEmptySlices: false,  isSeparator: {(c:Character)->Bool in return c==";"})
+                
+                let fileInfo: File?
+                let fileLicence: File?
                 
                 let softwareName: String
                 let softwareLicenceFilePath: String
+                let softwareLicenceFileFormat: String
+                let softwareLicenceKeyName: String
+                let softwareKey: String?
                 let softwareInfoFilePath: String
                 let softwareVersion: String?
+                let copyright: String?
                 
                 //TODO try and cath pour lever l'erreur lorsque le fichier est mal rempli
                 softwareName = separatedsemicolon[0]
+                
                 softwareLicenceFilePath = separatedsemicolon[1]
-                softwareInfoFilePath = separatedsemicolon[2]
+                softwareLicenceFileFormat = separatedsemicolon[2]
                 
-                //create the software with the information
+                softwareLicenceKeyName = separatedsemicolon[3]
                 
-                let fileInfo: FilePlist?
+                softwareInfoFilePath = separatedsemicolon[4]
+                
+                //get the software information
+                
                 fileInfo = FilePlist(path: softwareInfoFilePath)
                 
                 softwareVersion = fileInfo?.findValue("CFBundleShortVersionString")
-                fileInfo?.findValue("FBundleVersion")
-                fileInfo?.findValue("NSHumanReadableCopyright")
-                
+                copyright = fileInfo?.findValue("NSHumanReadableCopyright")
+               
                 println("version")
                 println(softwareVersion)
-
+                println("copyright")
+                println(copyright)
+                
+                //get the software information
+                
+                fileLicence = FileFactory.createFile(softwareLicenceFilePath, format: softwareLicenceFileFormat)
+                
+                softwareKey = fileLicence?.findValue(softwareLicenceKeyName)
+                
+                println("software Key")
+                println(softwareKey)
+                
+                //create the software with the information
                 let software :Software
-                software = Software(name: softwareName , vendor: "", version: "", computerName: "", userName: "", key: "", keyRegistryPath: "" , keyRegistryValue: "")
+                software = Software(name: softwareName , vendor: "", version: softwareVersion!, computerName: "", userName: "", key: softwareKey!, keyRegistryPath: "" , keyRegistryValue: "")
                 
                 softwareList.append(software)
                 
