@@ -109,7 +109,7 @@ class KeyExtractorTests: XCTestCase {
     }
     
     func testFileTXT(){
-        let path =  "/Users/remy/Desktop/license-fusion-70-e3-201404"
+        let path =  "/Library/Preferences/VMware Fusion/license-fusion-70-e3-201404"
         let format = "txt"
         
         XCTAssertNotNil(path,"problème d'initialisation du path")

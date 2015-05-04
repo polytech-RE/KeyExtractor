@@ -22,7 +22,7 @@ class FileFactory {
             case "plist":
                 return FilePlist(path: path)
             case "txt":
-                return FilePlist(path: path)
+                return FileTXT(path: path)
             default:
                 NSException(name: "extension", reason: "the extension isn't implemented", userInfo: nil)
                 return nil
