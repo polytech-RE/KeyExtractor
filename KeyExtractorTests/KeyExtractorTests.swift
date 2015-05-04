@@ -149,7 +149,6 @@ class KeyExtractorTests: XCTestCase {
         let filePlist: File
         filePlist = FileFactory.createFile(pathPlist, format: formatPlist)!
         
-        println(filePlist)
         let key = filePlist.findValue("sequence")
         
         /////////////////////////////////////////////////////////////////////////////////////////

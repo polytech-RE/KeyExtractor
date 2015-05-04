@@ -26,7 +26,6 @@ class FileTXT: File {
         self.path = path
         var err: NSError? = NSError()
         self.content = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: &err)
-        println(self.content)
     }
     
     //functions

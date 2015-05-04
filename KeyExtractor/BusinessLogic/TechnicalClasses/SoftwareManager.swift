@@ -81,9 +81,6 @@ class SoftwareManager {
                 
                 fileLicence = FileFactory.createFile(softwareLicenceFilePath, format: softwareLicenceFileFormat)
                 
-                println("File")
-                println(fileLicence)
-                
                 println("Key Name")
                 println(softwareLicenceKeyName)
                 
