@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Software {
+public class Software {
     
     /*
     The software name
@@ -40,5 +40,37 @@ class Software {
         //self.keys = Set()
     }
     
-
+    //Getters
+    
+    /*
+    getter for name
+    */
+    public func getName() -> String{
+        
+        return self.name
+    }
+    
+    /*
+    getter for copyright
+    */
+    public func getCopyright() -> String{
+        
+        return self.copyright
+    }
+   
+    /*
+    getter for version
+    */
+    public func getVersion() -> String{
+        
+        return self.version
+    }
+    
+    /*
+    getter for key
+    */
+    public func getKey() -> String{
+        
+        return self.key
+    }
 }
