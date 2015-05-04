@@ -15,6 +15,7 @@ class SoftwareManager {
     
     init(){
         
+        //TODO emplacement fichier (dans le logiciel?)
         self.pathListFile = "/Users/remy/Desktop/ways.txt"
         self.softwareList = [Software]()
         
@@ -91,7 +92,7 @@ class SoftwareManager {
                 
                 //create the software with the information
                 let software :Software
-                software = Software(name: softwareName , vendor: "", version: softwareVersion!, computerName: "", userName: "", key: softwareKey!, keyRegistryPath: "" , keyRegistryValue: "")
+                software = Software(name: softwareName, copyright: copyright!, version: softwareVersion!, key: softwareKey!)
                 
                 softwareList.append(software)
                 

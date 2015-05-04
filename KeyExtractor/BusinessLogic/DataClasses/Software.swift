@@ -10,40 +10,34 @@ import Foundation
 
 class Software {
     
+    /*
+    The software name
+    */
     private var name : String
-    private var vendor : String
-    private var InstallLocation: String
-    private var version : String
-    
-    //private var keys: Set<SoftwareKey> //Set<SoftwareKey>
     
     /*
-    The licence key (ex 'AAA-BBBB-CCCCC-EEEEE')
+    The software copyright
+    */
+    private var copyright : String
+
+    /*
+    The software version
+    */
+    private var version : String
+    
+    /*
+    The software  (ex 'AAA-BBBB-CCCCC-EEEEE')
     */
     private var key : String
     
-    /*
-    Registry path of the licence key
-    */
-    private var keyRegistryPath: String
+    //private var keys: Set<SoftwareKey> //Set<SoftwareKey>
     
-    /*
-    Registry value which contains the licence key (ex 'ProductID')
-    */
-    private var keyRegistryValue: String
-    
-    private var userName: String
-    
-    init(name: String, vendor: String, version: String, computerName: String, userName: String, key: String, keyRegistryPath: String, keyRegistryValue: String) {
+    init(name: String, copyright: String, version: String, key: String) {
         self.name = name
-        self.vendor = vendor
+        self.copyright = copyright
         self.version = version
-        self.userName = userName
         self.key = key
-        self.keyRegistryPath = keyRegistryPath
-        self.keyRegistryValue = keyRegistryValue
         //self.keys = Set()
-        self.InstallLocation = String()
     }
     
 
