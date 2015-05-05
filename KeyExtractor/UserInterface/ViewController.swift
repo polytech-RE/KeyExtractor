@@ -26,12 +26,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        /*
-        let dir:NSURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.CachesDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as! NSURL
-        
-        let fileurl = dir.URLByAppendingPathComponent("ways.txt")
-        */
+
         }
 
     override var representedObject: AnyObject? {
@@ -39,7 +34,6 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
 
     @IBAction func send(sender: AnyObject) {
         
@@ -59,16 +53,30 @@ class ViewController: NSViewController {
             informationPathError!.stringValue = "fill the field information path"
         }
         
+        let formatValue: String
+        
+        switch format.titleOfSelectedItem!{
+            
+            case "dictionary":
+                formatValue = "Plist"
+            case "xml attribute":
+                formatValue = "xml"
+            case "text":
+                formatValue = "txt"
+            default:
+                formatValue = String()
+                //TODO ERROR
+        }
+
         // record information
         if( name != "" && licencePath != "" && infoPath != ""){
             
             let line: String
-            line = name.stringValue + ";" + licencePath.stringValue + ";" + infoPath.stringValue + "\n"
+            line = name.stringValue + ";" + licencePath.stringValue + ";" + formatValue + "\n"
             let encodingLine = line.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
     
             let dir:String = NSFileManager.defaultManager().currentDirectoryPath
 
-            println()
             let fileurl = dir + "/ways.txt"
             
             if NSFileManager.defaultManager().fileExistsAtPath(fileurl) {
@@ -91,7 +99,6 @@ class ViewController: NSViewController {
                 }
             }
 
-            
         }
         
     }
