@@ -660,14 +660,14 @@
                                     <rect key="frame" x="1" y="17" width="238" height="117"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Egc-Ag-rH0" viewBased="YES" id="xDf-n5-DSo">
-                                            <rect key="frame" x="0.0" y="0.0" width="238" height="117"/>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="t4V-JU-BCN" viewBased="YES" id="xDf-n5-DSo">
+                                            <rect key="frame" x="0.0" y="0.0" width="444" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="113.0390625" minWidth="40" maxWidth="1000" id="BfW-pH-rkP">
+                                                <tableColumn identifier="NameColumn" width="113.0390625" minWidth="40" maxWidth="1000" id="BfW-pH-rkP">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Name">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -800,7 +800,7 @@
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.66666666666666663" horizontal="YES" id="Mjy-iz-Cop">
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="Mjy-iz-Cop">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -808,8 +808,8 @@
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <tableHeaderView key="headerView" id="Egc-Ag-rH0">
-                                    <rect key="frame" x="0.0" y="0.0" width="238" height="17"/>
+                                <tableHeaderView key="headerView" id="t4V-JU-BCN">
+                                    <rect key="frame" x="0.0" y="0.0" width="10000" height="17"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
