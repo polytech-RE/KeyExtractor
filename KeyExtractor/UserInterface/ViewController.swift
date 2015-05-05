@@ -68,6 +68,7 @@ class ViewController: NSViewController {
     
             let dir:String = NSFileManager.defaultManager().currentDirectoryPath
 
+            println()
             let fileurl = dir + "/ways.txt"
             
             if NSFileManager.defaultManager().fileExistsAtPath(fileurl) {

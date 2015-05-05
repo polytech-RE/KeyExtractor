@@ -722,14 +722,14 @@
                             </textField>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SLN-SZ-Erj">
                                 <rect key="frame" x="258" y="134" width="100" height="26"/>
-                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="Uge-xt-yWJ">
+                                <popUpButtonCell key="cell" type="push" title="dictionary" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="eWm-Rq-efo" id="Uge-xt-yWJ">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="kyN-a2-RC9">
                                         <items>
-                                            <menuItem title="Item 1" id="eWm-Rq-efo"/>
-                                            <menuItem title="Item 2" id="OEV-92-Tt3"/>
-                                            <menuItem title="Item 3" id="89U-qL-sWm"/>
+                                            <menuItem title="dictionary" state="on" id="eWm-Rq-efo"/>
+                                            <menuItem title="xml attribute" id="OEV-92-Tt3"/>
+                                            <menuItem title="text" id="89U-qL-sWm"/>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
