@@ -60,21 +60,23 @@ class ViewController: NSViewController {
         }
         
         // record information
-        if( name != nil && licencePath != nil && infoPath != nil){
+        if( name != "" && licencePath != "" && infoPath != ""){
             
             let line: String
             line = name.stringValue + ";" + licencePath.stringValue + ";" + infoPath.stringValue + "\n"
-            let encodingLine = line.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+            let encodingLine = line.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
+    
+            let dir:String = NSFileManager.defaultManager().currentDirectoryPath
+
+            let fileurl = dir + "/ways.txt"
             
-            let dir:NSURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.CachesDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as! NSURL
-            
-            let fileurl = dir.URLByAppendingPathComponent("ways.txt")
-            
-            if NSFileManager.defaultManager().fileExistsAtPath(fileurl.path!) {
+            if NSFileManager.defaultManager().fileExistsAtPath(fileurl) {
                 var err:NSError?
-                if let fileHandle = NSFileHandle(forWritingToURL: fileurl, error: &err) {
+                if let fileHandle = NSFileHandle(forWritingAtPath: fileurl) {
+                    
                     fileHandle.seekToEndOfFile()
                     fileHandle.writeData(encodingLine)
+                    println(encodingLine)
                     fileHandle.closeFile()
                 }
                 else {
@@ -83,7 +85,7 @@ class ViewController: NSViewController {
             }
             else {
                 var err:NSError?
-                if !encodingLine.writeToURL(fileurl, options: .DataWritingAtomic, error: &err) {
+                if !encodingLine.writeToFile(fileurl, options: .DataWritingAtomic, error: &err) {
                     println("Can't write \(err)")
                 }
             }

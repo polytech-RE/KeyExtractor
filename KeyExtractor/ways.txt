@@ -1,0 +1,2 @@
+Microsoft Office 2006;/Library/Preferences/com.microsoft.office.licensing.plist;plist;sequence;/Applications/Microsoft Office 2011/Microsoft Word.app/Contents/Info.plist;
+VMware Workstation;/Library/Preferences/VMware Fusion/license-fusion-70-e3-201404;txt;Serial;/Applications/VMware Fusion.app/Contents/Info.plist;
