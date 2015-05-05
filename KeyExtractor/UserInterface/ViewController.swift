@@ -11,15 +11,28 @@ import Cocoa
 class ViewController: NSViewController {
 
     @IBOutlet weak var name: NSTextField!
-    @IBOutlet weak var licensepath: NSTextField!
+    @IBOutlet weak var licencePath: NSTextField!
     @IBOutlet weak var format: NSPopUpButton!
-    @IBOutlet weak var infopath: NSTextField!
+    @IBOutlet weak var infoPath: NSTextField!
+
     
+    //Label to print message error
+    @IBOutlet weak var nameError: NSTextField!
+    @IBOutlet weak var licencePathError: NSTextField!
+    @IBOutlet weak var informationPathError: NSTextField!
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
+        
+        /*
+        let dir:NSURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.CachesDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as! NSURL
+        
+        let fileurl = dir.URLByAppendingPathComponent("ways.txt")
+        */
+        }
 
     override var representedObject: AnyObject? {
         didSet {
@@ -29,8 +42,54 @@ class ViewController: NSViewController {
 
 
     @IBAction func send(sender: AnyObject) {
-        // recuperer champ
-        // enrengister fichier
+        
+        //clean value
+        nameError!.stringValue = ""
+        licencePathError!.stringValue  = ""
+        informationPathError!.stringValue = ""
+        
+        //check the fields
+        if(name.stringValue == ""){
+            nameError!.stringValue = "fill the field name"
+        }
+        if(licencePath.stringValue == ""){
+            licencePathError!.stringValue = "fill the field licence path"
+        }
+        if(infoPath.stringValue == ""){
+            informationPathError!.stringValue = "fill the field information path"
+        }
+        
+        // record information
+        if( name != nil && licencePath != nil && infoPath != nil){
+            
+            let line: String
+            line = name.stringValue + ";" + licencePath.stringValue + ";" + infoPath.stringValue + "\n"
+            let encodingLine = line.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+            
+            let dir:NSURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.CachesDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as! NSURL
+            
+            let fileurl = dir.URLByAppendingPathComponent("ways.txt")
+            
+            if NSFileManager.defaultManager().fileExistsAtPath(fileurl.path!) {
+                var err:NSError?
+                if let fileHandle = NSFileHandle(forWritingToURL: fileurl, error: &err) {
+                    fileHandle.seekToEndOfFile()
+                    fileHandle.writeData(encodingLine)
+                    fileHandle.closeFile()
+                }
+                else {
+                    println("Can't open fileHandle \(err)")
+                }
+            }
+            else {
+                var err:NSError?
+                if !encodingLine.writeToURL(fileurl, options: .DataWritingAtomic, error: &err) {
+                    println("Can't write \(err)")
+                }
+            }
+
+            
+        }
         
     }
 }
