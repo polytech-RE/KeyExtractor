@@ -10,6 +10,11 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var name: NSTextField!
+    @IBOutlet weak var licensepath: NSTextField!
+    @IBOutlet weak var format: NSPopUpButton!
+    @IBOutlet weak var infopath: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,5 +28,10 @@ class ViewController: NSViewController {
     }
 
 
+    @IBAction func send(sender: AnyObject) {
+        // recuperer champ
+        // enrengister fichier
+        
+    }
 }
 
