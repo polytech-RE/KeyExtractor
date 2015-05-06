@@ -122,4 +122,8 @@ class SoftwareManager {
         }
         return nil
     }
+    
+    func getSoftwares() ->[Software] {
+        return self.softwareList
+    }
 }

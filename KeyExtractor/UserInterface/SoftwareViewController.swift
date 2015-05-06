@@ -13,12 +13,14 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
     @IBOutlet
     var tableView: NSTableView!
     
-    
-    var items: [String] = ["We", "Heart", "Swift"]
+    private var softwareList: [Software] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let softwareManager: SoftwareManager = SoftwareManager()
+        softwareManager.fileSeek()
+        softwareList = softwareManager.getSoftwares()
 
     }
     
@@ -26,7 +28,7 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
     
         /* This method is required for the "Cell Based" TableView, and is optional for the "View Based" TableView. If implemented in the latter case, the value will be set to the view at a given row/column if the view responds to -setObjectValue: (such as NSControl and NSTableCellView).
         */
-        return items.count
+        return softwareList.count
     }
 
     func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject?{
@@ -38,14 +40,16 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
 
-        if row < items.count {	// prevents a rare crash when the last app in the table quits
+        if row < softwareList.count {	// prevents a rare crash when the last app in the table quits
 
             if let identifier = tableColumn?.identifier {
                 
-                let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
+                if tableColumn == "Name"{
+                    let cell = tableView.makeViewWithIdentifier("SoftwareCellName", owner: self) as! SoftwareCell
                 
-                cell.softwareName.stringValue = items[row]
-                return cell
+                    cell.label.stringValue = softwareList[row].getName()
+                    return cell
+                }
             }
         }
         return nil

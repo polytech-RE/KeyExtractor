@@ -18,7 +18,7 @@ import Foundation
     les fichiers
 */
 
-class SoftwareKey{
+public class SoftwareKey{
     
     /*  
         The key Value
@@ -37,11 +37,16 @@ class SoftwareKey{
         self.key = key
         self.weight = weight
     }
-    
+    /*
+        return the key
+    */
     public func getKey() -> String {
         return self.key
     }
     
+    /*
+        return the weight
+    */
     public func getWeight() -> Int {
         return self.weight
     }
