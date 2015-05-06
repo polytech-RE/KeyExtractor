@@ -67,45 +67,49 @@ class SoftwareManager {
                     softwareVersion = fileInfo?.findValue("CFBundleShortVersionString")
                     copyright = fileInfo?.findValue("NSHumanReadableCopyright")
                     
-                    println("version")
-                    println(softwareVersion)
-                    println("copyright")
-                    println(copyright)
+                    if (softwareVersion != nil && copyright != nil){
+                        println("version")
+                        println(softwareVersion)
+                        println("copyright")
+                        println(copyright)
 
                 
-                    //get the software information
-                    println("File Path")
-                    println(softwareLicenceFilePath)
-                    println("File Format")
-                    println(softwareLicenceFileFormat)
+                        //get the software information
+                        println("File Path")
+                        println(softwareLicenceFilePath)
+                        println("File Format")
+                        println(softwareLicenceFileFormat)
                 
-                    fileLicence = FileFactory.createFile(softwareLicenceFilePath, format: softwareLicenceFileFormat)
+                        fileLicence = FileFactory.createFile(softwareLicenceFilePath, format: softwareLicenceFileFormat)
                 
-                    if (fileLicence != nil){
-                        println("Key Name")
-                        println(softwareLicenceKeyName)
+                        if (fileLicence != nil){
+                            println("Key Name")
+                            println(softwareLicenceKeyName)
                 
-                        softwareKey = fileLicence?.findValue(softwareLicenceKeyName)
+                            softwareKey = fileLicence?.findValue(softwareLicenceKeyName)
                 
-                        println("software Key")
-                        println(softwareKey)
-                        if softwareKey != nil {
-                            //create the software with the information
-                            let software :Software
-                            software = Software(name: softwareName, copyright: copyright!, version: softwareVersion!, key: softwareKey!)
+                            println("software Key")
+                            println(softwareKey)
+                            if softwareKey != nil {
+                                //create the software with the information
+                                let software :Software
+                                software = Software(name: softwareName, copyright: copyright!, version: softwareVersion!, key: softwareKey!)
                         
                             softwareList.append(software)
-                        }
-                        else{
+                            }
+                            else{
 
                             //TODO error clé non trouvée
+                            }
+                        }
+                        else{
+                        
+                            //TODO error ouverture
                         }
                     }
                     else{
-                        
-                        //TODO error ouverture
+                        //version et copyright
                     }
-                
                 }
                 else{
                     softwareVersion = nil
