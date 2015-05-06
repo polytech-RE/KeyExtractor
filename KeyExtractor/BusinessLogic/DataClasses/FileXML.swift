@@ -31,25 +31,29 @@ class FileXML: NSObject, File, NSXMLParserDelegate{
     }
     
     func startParsing(){
-            let data: NSData = NSData(contentsOfFile: path)!
+            println("ATTENTION BLABLALBALBLABLABLALB : \(path)")
+        
+        if let data: NSData = NSData(contentsOfFile: path) {
             var objNSXMLParser = NSXMLParser(data: data)
             objNSXMLParser.delegate = self
             objNSXMLParser.parse()
+        }
+        else{
+            NSException(name: "openFile", reason : "unknown", userInfo: nil)
+        }
     }
     
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
-        println("Element's name is \(elementName)")
-        println("Element's attributes are \(attributeDict)")
-        currentKey=attributeDict.values.first
-        println(currentKey)
-        println("\(currentKey)")
+        currentKey=("\(elementName) \(attributeDict.values.array)")
+        println("currentKey : \(currentKey!)")
     }
     
     func parser(parser: NSXMLParser, foundCharacters string: String?) {
-        if "\(currentKey)"=="Optional(PayloadCode)"{
-            currentValue += string ?? String()
-            let newValue = currentValue.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-            licence = newValue == String() ? nil : newValue
-        }
+        currentValue += string ?? String()
+    }
+    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?){
+        println("currentValue : \(currentValue)")
+        currentValue = ""
+        //TODO sauver la currentValue si elle ressemble à une clé
     }
 }
