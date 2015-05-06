@@ -24,7 +24,14 @@ class FilePlist: File {
     init(path: String){
         self.path = path
         
-        self.dictionary = NSDictionary(contentsOfFile: path)!;
+        if let dic = NSDictionary(contentsOfFile: path) {
+            self.dictionary = dic
+        }
+        else{
+            self.dictionary = NSDictionary()
+            NSException(name: "file not exist", reason: "error while the execution (open)", userInfo: nil)
+        }
+        
     }
     
     //functions

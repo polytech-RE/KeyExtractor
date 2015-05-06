@@ -53,49 +53,65 @@ class SoftwareManager {
                 
                 //TODO try and cath pour lever l'erreur lorsque le fichier est mal rempli
                 softwareName = separatedsemicolon[0]
-                
                 softwareLicenceFilePath = separatedsemicolon[1]
                 softwareLicenceFileFormat = separatedsemicolon[2]
-                
                 softwareLicenceKeyName = separatedsemicolon[3]
-                
                 softwareInfoFilePath = separatedsemicolon[4]
                 
                 //get the software information
-                
+                //if ( softwareInfoFilePath && softwareLicenceKeyName  && softwareLicenceFileFormat  && softwareLicenceFilePath ){
+                  
                 fileInfo = FilePlist(path: softwareInfoFilePath)
                 
-                softwareVersion = fileInfo?.findValue("CFBundleShortVersionString")
-                copyright = fileInfo?.findValue("NSHumanReadableCopyright")
-               
-                println("version")
-                println(softwareVersion)
-                println("copyright")
-                println(copyright)
+                if ( fileInfo != nil){
+                    softwareVersion = fileInfo?.findValue("CFBundleShortVersionString")
+                    copyright = fileInfo?.findValue("NSHumanReadableCopyright")
+                    
+                    println("version")
+                    println(softwareVersion)
+                    println("copyright")
+                    println(copyright)
+
                 
-                //get the software information
+                    //get the software information
+                    println("File Path")
+                    println(softwareLicenceFilePath)
+                    println("File Format")
+                    println(softwareLicenceFileFormat)
                 
-                println("File Path")
-                println(softwareLicenceFilePath)
-                println("File Format")
-                println(softwareLicenceFileFormat)
+                    fileLicence = FileFactory.createFile(softwareLicenceFilePath, format: softwareLicenceFileFormat)
                 
-                fileLicence = FileFactory.createFile(softwareLicenceFilePath, format: softwareLicenceFileFormat)
+                    if (fileLicence != nil){
+                        println("Key Name")
+                        println(softwareLicenceKeyName)
                 
-                println("Key Name")
-                println(softwareLicenceKeyName)
+                        softwareKey = fileLicence?.findValue(softwareLicenceKeyName)
                 
-                softwareKey = fileLicence?.findValue(softwareLicenceKeyName)
+                        println("software Key")
+                        println(softwareKey)
+                        if softwareKey != nil {
+                            //create the software with the information
+                            let software :Software
+                            software = Software(name: softwareName, copyright: copyright!, version: softwareVersion!, key: softwareKey!)
+                        
+                            softwareList.append(software)
+                        }
+                        else{
+
+                            //TODO error clé non trouvée
+                        }
+                    }
+                    else{
+                        
+                        //TODO error ouverture
+                    }
                 
-                println("software Key")
-                println(softwareKey)
-                
-                //create the software with the information
-                let software :Software
-                software = Software(name: softwareName, copyright: copyright!, version: softwareVersion!, key: softwareKey!)
-                
-                softwareList.append(software)
-                
+                }
+                else{
+                    softwareVersion = nil
+                    copyright = nil
+                    //TODO erreur ouverture fichier info
+                }
             }
         }
 

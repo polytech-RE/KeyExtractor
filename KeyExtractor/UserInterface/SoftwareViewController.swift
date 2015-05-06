@@ -41,18 +41,35 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
 
         if row < softwareList.count {	// prevents a rare crash when the last app in the table quits
-
-            if let identifier = tableColumn?.identifier {
-                
-                if tableColumn == "Name"{
-                    let cell = tableView.makeViewWithIdentifier("SoftwareCellName", owner: self) as! SoftwareCell
-                
-                    cell.label.stringValue = softwareList[row].getName()
+            
+            if let identifier = tableColumn?.identifier{
+                switch identifier{
+                case "Name":
+                    let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
+                    cell.softwareName.stringValue = softwareList[row].getName()
                     return cell
+                case "Copyright":
+                    let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
+                    println("Mon copyright :")
+                    println(softwareList[row].getCopyright())
+                    cell.softwareName.stringValue = softwareList[row].getCopyright()
+                    return cell
+                case "Version":
+                    let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
+                    cell.softwareName.stringValue = softwareList[row].getVersion()
+                    return cell
+                case "Key":
+                    let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
+                    cell.softwareName.stringValue = softwareList[row].getKey()
+                    return cell
+                default:
+                    return nil
+                    //TODO Exception
                 }
             }
         }
         return nil
+        //TODO Exception
     }
     
     
