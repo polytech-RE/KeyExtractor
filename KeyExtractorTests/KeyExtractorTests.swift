@@ -32,7 +32,7 @@ class KeyExtractorTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    func testFilePlist() {
+    /*func testFilePlist() {
         
         let path = "/Library/Preferences/com.microsoft.office.licensing.plist"
         XCTAssertNotNil(path,"problème d'initialisation du path")
@@ -62,9 +62,9 @@ class KeyExtractorTests: XCTestCase {
         stringValue = filePlist.findValue("toto")
         XCTAssertNil(stringValue, "une valeur est associée à la clé")
         
-    }
+    }*/
     
-    func testFileXML() {
+    /*func testFileXML() {
         
         //let path = "/Library/Application Support/Adobe/Adobe Photoshop CS6/AMT_Driver/application.xml"
         let path = "/Users/remy/Desktop/Lightroom 5.0 Registration.xml"
@@ -90,9 +90,9 @@ class KeyExtractorTests: XCTestCase {
         
         let key: String = "serial_number"
 
-    }
+    }*/
     
-    func testFileWays(){
+    /*func testFileWays(){
         let path =  "/Users/remy/Documents/LINXYA/trunk/linxya_key_extractor/ways.txt"
         XCTAssertNotNil(path,"problème d'initialisation du path")
         
@@ -106,9 +106,9 @@ class KeyExtractorTests: XCTestCase {
         
         XCTAssertNotNil(fileTXT.content,"problème d'initialisation du dictionary pour le fichier txt")
         
-    }
+    }*/
     
-    func testFileTXT(){
+    /*func testFileTXT(){
         let path =  "/Library/Preferences/VMware Fusion/license-fusion-70-e3-201404"
         let format = "txt"
         
@@ -136,9 +136,9 @@ class KeyExtractorTests: XCTestCase {
         stringValue = fileTXT.findValue("toto")
         XCTAssertNil(stringValue, "une valeur est associée à la clé")
         
-    }
+    }*/
 
-    func testFileFactory(){
+    /*func testFileFactory(){
         
         let pathPlist = "/Library/Preferences/com.microsoft.office.licensing.plist"
         let formatPlist = "plist"
@@ -166,11 +166,16 @@ class KeyExtractorTests: XCTestCase {
         file.findValue("PayloadCode")
         */
         /////////////////////////////////////////////////////////////////////////////////////////
-    }
+    }*/
     
     
     func testSoftwareManager(){
         let softwareManager: SoftwareManager = SoftwareManager()
         softwareManager.fileSeek()
+    }
+    
+    func testSoftwareManager2(){
+        let softwareManager: SoftwareManager = SoftwareManager()
+        softwareManager.autoSeek()
     }
 }

@@ -103,13 +103,23 @@ class SoftwareManager {
         return nil
     }
     
-    /*  This function alows to find all the software
+    /*  This function allows to find all the software
         with licence in  the basic folder (maybe
         /Library/Preferences)
     */
     func autoSeek()-> Software? {
-    
+        var currentFile:FileXML
+        var currentPath:String
+        let fileManager: NSFileManager = NSFileManager()
+        if let files = fileManager.subpathsAtPath("/Library/Preferences/") as? [String]{
+            for file in files{
+                currentPath = "/Library/Preferences/\(file)"
+                if file.pathExtension == "plist" {
+                    currentFile=FileXML(path: currentPath)
+                    currentFile.startParsing()
+                }
+            }
+        }
         return nil
     }
-
 }
