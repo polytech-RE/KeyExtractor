@@ -10,9 +10,8 @@ import Cocoa
 
 class SoftwareCell: NSTableCellView {
     
-
     @IBOutlet weak var softwareName: NSTextField!
-
+   
     func loadItem(#name: String) {
         softwareName.stringValue = name
     }
