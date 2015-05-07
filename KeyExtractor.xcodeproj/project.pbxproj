@@ -56,7 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6F7F822D1AEE26F70033B834 /* FileFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileFactory.swift; sourceTree = "<group>"; };
+		6F7F822D1AEE26F70033B834 /* FileFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileFactory.swift; path = ../TechnicalClasses/FileFactory.swift; sourceTree = "<group>"; };
 		6F7F822F1AEE906B0033B834 /* myXMLParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myXMLParserDelegate.swift; sourceTree = "<group>"; };
 		6FEADC131AE91DE700469EEC /* Launcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		AD137A3F1AEF7402001B9D3B /* SoftwareManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareManager.swift; sourceTree = "<group>"; };
@@ -173,6 +173,7 @@
 				ADA740811AEA1F0700966518 /* FilePlist.swift */,
 				ADA740821AEA1F0700966518 /* FileXML.swift */,
 				AD137A421AEF8C0C001B9D3B /* FileTXT.swift */,
+				6F7F822D1AEE26F70033B834 /* FileFactory.swift */,
 				ADA740831AEA1F0700966518 /* Software.swift */,
 				ADA740841AEA1F0700966518 /* SoftwareKey.swift */,
 			);
@@ -182,7 +183,6 @@
 		ADA740851AEA1F0700966518 /* TechnicalClasses */ = {
 			isa = PBXGroup;
 			children = (
-				6F7F822D1AEE26F70033B834 /* FileFactory.swift */,
 				6F7F822F1AEE906B0033B834 /* myXMLParserDelegate.swift */,
 				AD137A3F1AEF7402001B9D3B /* SoftwareManager.swift */,
 			);

@@ -59,8 +59,13 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
                     cell.softwareName.stringValue = softwareList[row].getVersion()
                     return cell
                 case "Key":
+                    println("AKEIGRVUAEGYF : \(softwareList[row].getKey())")
                     let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
                     cell.softwareName.stringValue = softwareList[row].getKey()
+                    //cell.textField?.lineBreakMode = NSLineBreakMode(rawValue: 2)!
+                    //cell.textField?.sizeToFit()
+                    
+                    println("AKEIGRVUAEGYF : \(cell.softwareName.stringValue)")
                     return cell
                 default:
                     return nil
