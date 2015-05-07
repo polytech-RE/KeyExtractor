@@ -29,7 +29,6 @@ class FileXML: NSObject, File, NSXMLParserDelegate{
     func findValue(key: String) -> String? {
         return ""
     }
-    
     func startParsing(){
             println("ATTENTION BLABLALBALBLABLABLALB : \(path)")
         
@@ -52,8 +51,18 @@ class FileXML: NSObject, File, NSXMLParserDelegate{
         currentValue += string ?? String()
     }
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?){
-        println("currentValue : \(currentValue)")
+        println("{currentValue : \(currentValue)}")
+        if testKey(currentValue){
+            println("KEY FOUND : \(currentValue)")
+        }
         currentValue = ""
-        //TODO sauver la currentValue si elle ressemble à une clé
+        
+    }
+    func testKey(content:String) -> Bool {
+        var regex = "^[a-zA-Z0-9]+[-]{1}[a-zA-Z0-9|[-]]*[a-zA-Z0-9]+$"
+        if let match = content.rangeOfString(regex, options: .RegularExpressionSearch) {
+            return true
+        }
+        return false
     }
 }
