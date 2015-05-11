@@ -16,7 +16,8 @@ class SoftwareManager {
     init(){
         
         //TODO emplacement fichier (dans le logiciel?)
-        self.pathListFile = "/Users/polytech/Desktop/ways.txt"
+        //self.pathListFile = "/Users/polytech/Desktop/ways.txt"
+        self.pathListFile = "/Users/remy/Desktop/ways.txt"
         self.softwareList = [Software]()
         
     }
