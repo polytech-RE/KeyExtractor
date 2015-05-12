@@ -44,29 +44,32 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
             
             if let identifier = tableColumn?.identifier{
                 switch identifier{
+                    
                 case "Name":
                     let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
                     cell.softwareName.stringValue = softwareList[row].getName()
                     return cell
+                    
                 case "Copyright":
                     let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
-                    println("Mon copyright :")
-                    println(softwareList[row].getCopyright())
                     cell.softwareName.stringValue = softwareList[row].getCopyright()
                     return cell
+                    
                 case "Version":
                     let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
                     cell.softwareName.stringValue = softwareList[row].getVersion()
                     return cell
+                    
                 case "Key":
-                    println("AKEIGRVUAEGYF : \(softwareList[row].getKey())")
                     let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
                     cell.softwareName.stringValue = softwareList[row].getKey()
-                    //cell.textField?.lineBreakMode = NSLineBreakMode(rawValue: 2)!
-                    //cell.textField?.sizeToFit()
-                    
-                    println("AKEIGRVUAEGYF : \(cell.softwareName.stringValue)")
                     return cell
+                    
+                case "Sell":
+                    let cell = tableView.makeViewWithIdentifier("check", owner: self) as! SoftwareButton
+                    cell.checkbox.state = 0
+                    return cell
+                    
                 default:
                     return nil
                     //TODO Exception
@@ -76,16 +79,5 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
         return nil
         //TODO Exception
     }
-    
-    
-    func tableView(tableView: NSTableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> NSTableCellView!{
-        
-        var cell:NSTableCellView = self.tableView.makeViewWithIdentifier("cell", owner: self) as! NSTableCellView!
-        
-        cell.textField!.stringValue = "test"
-        
-        return cell
-    }
-
     
 }

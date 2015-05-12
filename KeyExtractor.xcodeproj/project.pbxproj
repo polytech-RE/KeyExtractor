@@ -21,6 +21,8 @@
 		AD40E1A51AF8F77B00DBFFF0 /* SoftwareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40E1A31AF8F77B00DBFFF0 /* SoftwareViewController.swift */; };
 		AD7ADBB11AF8AC610006E9C0 /* ways.txt in Resources */ = {isa = PBXBuildFile; fileRef = AD7ADBB01AF8AC610006E9C0 /* ways.txt */; };
 		AD7ADBB21AF8AC610006E9C0 /* ways.txt in Resources */ = {isa = PBXBuildFile; fileRef = AD7ADBB01AF8AC610006E9C0 /* ways.txt */; };
+		AD8F261A1B020CA000C5F8A6 /* SoftwareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8F26191B020CA000C5F8A6 /* SoftwareButton.swift */; };
+		AD8F261B1B020CA000C5F8A6 /* SoftwareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8F26191B020CA000C5F8A6 /* SoftwareButton.swift */; };
 		ADA2794E1AE7CC01005D8F88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */; };
 		ADA279521AE7CC01005D8F88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA279511AE7CC01005D8F88 /* Images.xcassets */; };
 		ADA279551AE7CC01005D8F88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA279531AE7CC01005D8F88 /* Main.storyboard */; };
@@ -63,6 +65,7 @@
 		AD137A421AEF8C0C001B9D3B /* FileTXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTXT.swift; sourceTree = "<group>"; };
 		AD40E1A31AF8F77B00DBFFF0 /* SoftwareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareViewController.swift; sourceTree = "<group>"; };
 		AD7ADBB01AF8AC610006E9C0 /* ways.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ways.txt; path = KeyExtractor/ways.txt; sourceTree = "<group>"; };
+		AD8F26191B020CA000C5F8A6 /* SoftwareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareButton.swift; sourceTree = "<group>"; };
 		ADA279481AE7CC01005D8F88 /* KeyExtractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyExtractor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADA279511AE7CC01005D8F88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 				ADA740991AEA1F2100966518 /* ViewController.swift */,
 				ADA279531AE7CC01005D8F88 /* Main.storyboard */,
 				AD40E1A31AF8F77B00DBFFF0 /* SoftwareViewController.swift */,
+				AD8F26191B020CA000C5F8A6 /* SoftwareButton.swift */,
 				ADFDD7531AFA0BB00056D89F /* SoftwareCell.swift */,
 			);
 			path = UserInterface;
@@ -325,6 +329,7 @@
 				AD40E1A41AF8F77B00DBFFF0 /* SoftwareViewController.swift in Sources */,
 				ADA7408B1AEA1F0700966518 /* FileXML.swift in Sources */,
 				AD137A431AEF8C0C001B9D3B /* FileTXT.swift in Sources */,
+				AD8F261A1B020CA000C5F8A6 /* SoftwareButton.swift in Sources */,
 				ADA7408F1AEA1F0700966518 /* SoftwareKey.swift in Sources */,
 				ADA740871AEA1F0700966518 /* File.swift in Sources */,
 				ADFDD7541AFA0BB00056D89F /* SoftwareCell.swift in Sources */,
@@ -347,6 +352,7 @@
 				AD40E1A51AF8F77B00DBFFF0 /* SoftwareViewController.swift in Sources */,
 				ADA279611AE7CC01005D8F88 /* KeyExtractorTests.swift in Sources */,
 				AD137A441AEF8C0C001B9D3B /* FileTXT.swift in Sources */,
+				AD8F261B1B020CA000C5F8A6 /* SoftwareButton.swift in Sources */,
 				ADA7409D1AEA1F2100966518 /* Logger.swift in Sources */,
 				ADA740A11AEA1F2100966518 /* ViewController.swift in Sources */,
 				ADFDD7551AFA0BB00056D89F /* SoftwareCell.swift in Sources */,
