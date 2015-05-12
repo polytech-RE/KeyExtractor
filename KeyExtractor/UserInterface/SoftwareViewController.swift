@@ -21,7 +21,13 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
         let softwareManager: SoftwareManager = SoftwareManager()
         softwareManager.fileSeek()
         softwareList = softwareManager.getSoftwares()
-
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        if ((self.tableView) != nil){
+            self.tableView.reloadData()
+        }
     }
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int{
@@ -37,19 +43,19 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
         */
         return nil
     }
-    
-    func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
+    /*
+    func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSCell? {
 
         if row < softwareList.count {	// prevents a rare crash when the last app in the table quits
-            
             if let identifier = tableColumn?.identifier{
+                
                 switch identifier{
                 case "Name":
-                    let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
-                    cell.softwareName.stringValue = softwareList[row].getName()
+                    let cell = tableView.makeViewWithIdentifier("CellName", owner: self) as! NSTextFieldCell
+                    cell.stringValue = softwareList[row].getName()
                     return cell
                 case "Copyright":
-                    let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
+                    let cell = tableView.makeViewWithIdentifier("", owner: self) as! SoftwareCell
                     println("Mon copyright :")
                     println(softwareList[row].getCopyright())
                     cell.softwareName.stringValue = softwareList[row].getCopyright()
@@ -86,6 +92,11 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
         
         return cell
     }
-
+*/
+    func tableView(tableView: NSTableView, dataCellForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSCell?{
+        let cell: NSCell = NSTextFieldCell(textCell: "text")
+        return cell
+    }
+    
     
 }
