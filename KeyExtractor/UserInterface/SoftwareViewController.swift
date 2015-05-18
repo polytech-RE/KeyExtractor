@@ -82,11 +82,12 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
 
     @IBAction func addSoftwareSell(sender: AnyObject) {
         
-        for indice in 1...self.softwareList.count {
-            self.tableView.tableColumnWithIdentifier("Sell")
-            /*if self.tableView.columnWithIdentifier("Sell")[indice].getState() == 1 {
-            self.softwareListSell.append(self.softwareList[indice - 1])
-            }*/
+        var softwareListSell: [Software] = []
+        
+        for software in self.softwareList{
+            if software.getSell() == 1{
+                softwareListSell.append(software)
+            }
         }
     }
     
