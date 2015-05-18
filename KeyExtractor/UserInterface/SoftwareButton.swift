@@ -15,4 +15,17 @@ class SoftwareButton: NSButton {
     func load( val: Int){
         self.checkbox.state = val
     }
+    
+    func getState() -> Int {
+        return self.checkbox.state
+    }
+    
+    @IBAction func addToSell(sender: NSButtonCell) {
+        if checkbox.state == 1 {
+            println("je met le software à vendre")
+        }
+        else {
+            println("je le passe à zéro")
+        }
+    }
 }

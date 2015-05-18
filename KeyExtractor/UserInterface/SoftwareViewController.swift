@@ -67,7 +67,7 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
                     
                 case "Sell":
                     let cell = tableView.makeViewWithIdentifier("check", owner: self) as! SoftwareButton
-                    cell.checkbox.state = 0
+                    cell.checkbox.state = softwareList[row].getSell()
                     return cell
                     
                 default:
@@ -79,5 +79,16 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
         return nil
         //TODO Exception
     }
+
+    @IBAction func addSoftwareSell(sender: AnyObject) {
+        
+        for indice in 1...self.softwareList.count {
+            self.tableView.tableColumnWithIdentifier("Sell")
+            /*if self.tableView.columnWithIdentifier("Sell")[indice].getState() == 1 {
+            self.softwareListSell.append(self.softwareList[indice - 1])
+            }*/
+        }
+    }
     
+
 }

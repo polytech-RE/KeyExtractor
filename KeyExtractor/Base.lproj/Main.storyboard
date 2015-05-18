@@ -661,13 +661,42 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="systemDefault" headerView="t4V-JU-BCN" viewBased="YES" id="xDf-n5-DSo">
-                                            <rect key="frame" x="0.0" y="0.0" width="640" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="638" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="5" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="Name" width="147.8359375" minWidth="40" maxWidth="1000" id="BfW-pH-rkP">
+                                                <tableColumn identifier="Sell" width="25" minWidth="25" maxWidth="25" id="gZH-M3-XUh">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Sell">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" alignment="left" title="Text Cell" id="7RR-vr-R4P">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <button identifier="check" id="VuC-9h-jRM" customClass="SoftwareButton" customModule="KeyExtractor" customModuleProvider="target">
+                                                            <rect key="frame" x="602" y="1" width="25" height="18"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                            <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="above" alignment="center" state="on" inset="2" id="TJE-jk-M2f">
+                                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                <font key="font" metaFont="system"/>
+                                                                <connections>
+                                                                    <action selector="addToSell:" target="VuC-9h-jRM" id="G9J-GR-vjJ"/>
+                                                                </connections>
+                                                            </buttonCell>
+                                                            <connections>
+                                                                <outlet property="checkbox" destination="TJE-jk-M2f" id="sqF-gR-uoY"/>
+                                                            </connections>
+                                                        </button>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
+                                                <tableColumn identifier="Name" width="134.109375" minWidth="40" maxWidth="1000" id="BfW-pH-rkP">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Name">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -681,7 +710,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="SoftwareCell" id="jnf-SF-Zrd" customClass="SoftwareCell" customModule="KeyExtractor" customModuleProvider="target">
-                                                            <rect key="frame" x="1" y="1" width="148" height="17"/>
+                                                            <rect key="frame" x="32" y="1" width="134" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3s-2W-Har">
@@ -766,7 +795,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn identifier="Key" width="266.34375" minWidth="200" maxWidth="1000" id="xlt-iZ-yve">
+                                                <tableColumn identifier="Key" width="288.40625" minWidth="200" maxWidth="1000" id="xlt-iZ-yve">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Key">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -780,7 +809,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="SoftwareCell" horizontalHuggingPriority="750" id="wxW-rG-DHH" customClass="SoftwareCell" customModule="KeyExtractor" customModuleProvider="target">
-                                                            <rect key="frame" x="331" y="1" width="266" height="17"/>
+                                                            <rect key="frame" x="347" y="1" width="288" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" placeholderIntrinsicWidth="596" placeholderIntrinsicHeight="17" translatesAutoresizingMaskIntoConstraints="NO" id="wP3-2W-niG">
@@ -797,32 +826,6 @@
                                                                 <outlet property="textField" destination="wP3-2W-niG" id="qmO-6N-zga"/>
                                                             </connections>
                                                         </tableCellView>
-                                                    </prototypeCellViews>
-                                                </tableColumn>
-                                                <tableColumn identifier="Sell" width="25" minWidth="25" maxWidth="25" id="gZH-M3-XUh">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Sell">
-                                                        <font key="font" metaFont="smallSystem"/>
-                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
-                                                    </tableHeaderCell>
-                                                    <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" alignment="left" title="Text Cell" id="7RR-vr-R4P">
-                                                        <font key="font" metaFont="system"/>
-                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                    </textFieldCell>
-                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                                    <prototypeCellViews>
-                                                        <button identifier="check" id="VuC-9h-jRM" customClass="SoftwareButton" customModule="KeyExtractor" customModuleProvider="target">
-                                                            <rect key="frame" x="602" y="1" width="25" height="18"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                            <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="above" alignment="center" state="on" inset="2" id="TJE-jk-M2f">
-                                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                <font key="font" metaFont="system"/>
-                                                            </buttonCell>
-                                                            <connections>
-                                                                <outlet property="checkbox" destination="TJE-jk-M2f" id="sqF-gR-uoY"/>
-                                                            </connections>
-                                                        </button>
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
@@ -847,6 +850,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3R9-SF-UaJ">
+                                <rect key="frame" x="316" y="-2" width="82" height="32"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZbB-0w-M0e">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addSoftwareSell:" target="FPk-1V-ZLs" id="eod-ab-arX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="5Fz-l5-6qZ" firstAttribute="top" secondItem="8qV-us-5h2" secondAttribute="top" constant="30" id="1zb-sb-RVX"/>
@@ -858,7 +871,7 @@
                 </viewController>
                 <customObject id="ePA-Gv-Nhe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="681"/>
+            <point key="canvasLocation" x="684" y="736"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">

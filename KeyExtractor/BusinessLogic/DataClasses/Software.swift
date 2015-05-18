@@ -26,9 +26,14 @@ public class Software {
     private var version : String
     
     /*
-    The software  (ex 'AAA-BBBB-CCCCC-EEEEE')
+    The software key (ex 'AAA-BBBB-CCCCC-EEEEE')
     */
     private var key : String
+    
+    /*
+    attribute to know if the software is to sell
+    */
+    private var sell : Int
     
     //private var keys: Set<SoftwareKey> //Set<SoftwareKey>
     
@@ -37,6 +42,7 @@ public class Software {
         self.copyright = copyright
         self.version = version
         self.key = key
+        self.sell = 0
         //self.keys = Set()
     }
     
@@ -73,4 +79,13 @@ public class Software {
         
         return self.key
     }
+    
+    /*
+    getter for the sell value
+    */
+    public func getSell() -> Int{
+        
+        return self.sell
+    }
+
 }
