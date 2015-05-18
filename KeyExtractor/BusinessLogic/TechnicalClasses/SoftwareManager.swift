@@ -61,7 +61,8 @@ class SoftwareManager {
                 
                 //get the software information
                 //if ( softwareInfoFilePath && softwareLicenceKeyName  && softwareLicenceFileFormat  && softwareLicenceFilePath ){
-                  
+                
+                
                 fileInfo = FilePlist(path: softwareInfoFilePath)
                 
                 if ( fileInfo != nil){
@@ -100,12 +101,14 @@ class SoftwareManager {
                             }
                             else{
 
-                            //TODO error clé non trouvée
+                                NSLog("clé non trouvée")
+                                NSException(name: "missing key", reason: "key not found", userInfo: nil)
                             }
                         }
                         else{
                         
-                            //TODO error ouverture
+                            NSLog("erreur ouverture")
+                            NSException(name: "error opening", reason: "file licence open error", userInfo: nil)
                         }
                     }
                     else{
@@ -115,8 +118,8 @@ class SoftwareManager {
                 else{
                     softwareVersion = nil
                     copyright = nil
-                    //TODO erreur ouverture fichier info
-                }
+                    NSLog("erreur ouverture")
+                    NSException(name: "error opening", reason: "file information open error", userInfo: nil)                }
             }
         }
 
