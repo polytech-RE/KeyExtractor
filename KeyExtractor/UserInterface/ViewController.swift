@@ -50,7 +50,7 @@ class ViewController: NSViewController {
             licencePathError!.stringValue = "fill the field licence path"
         }
         if(infoPath.stringValue == ""){
-            informationPathError!.stringValue = "fill the field information path"
+            informationPathError!.stringValue = "fill this field"
         }
         
         let formatValue: String
