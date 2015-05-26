@@ -78,7 +78,7 @@ class AddSoftwareViewController: NSViewController {
         }
 
         // record information
-        if( name != "" && licencePath != "" && infoPath != ""){
+        if( name.stringValue != "" && licencePath.stringValue != "" && softwareKey.stringValue != "" && infoPath.stringValue != ""){
             
             let line: String
             line = name.stringValue + ";" + licencePath.stringValue + ";" + formatValue + ";" +  softwareKey.stringValue + ";" + infoPath.stringValue + "\n"
@@ -100,6 +100,7 @@ class AddSoftwareViewController: NSViewController {
                     
                     name.stringValue = ""
                     licencePath.stringValue = ""
+                    softwareKey.stringValue = ""
                     infoPath.stringValue = ""
                     
                 }

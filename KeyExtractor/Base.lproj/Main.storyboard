@@ -844,8 +844,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3R9-SF-UaJ">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3R9-SF-UaJ">
                                 <rect key="frame" x="316" y="-2" width="82" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="FBF-0M-lGZ"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="Sell" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZbB-0w-M0e">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -858,8 +861,11 @@
                         <constraints>
                             <constraint firstItem="5Fz-l5-6qZ" firstAttribute="top" secondItem="8qV-us-5h2" secondAttribute="top" constant="30" id="1zb-sb-RVX"/>
                             <constraint firstAttribute="trailing" secondItem="5Fz-l5-6qZ" secondAttribute="trailing" constant="30" id="7Ic-Xs-Vbg"/>
+                            <constraint firstAttribute="centerY" secondItem="3R9-SF-UaJ" secondAttribute="centerY" constant="-200.5" id="U5C-Zs-m7K"/>
+                            <constraint firstItem="3R9-SF-UaJ" firstAttribute="top" secondItem="5Fz-l5-6qZ" secondAttribute="bottom" constant="4" id="YIC-u4-t3L"/>
                             <constraint firstItem="5Fz-l5-6qZ" firstAttribute="leading" secondItem="8qV-us-5h2" secondAttribute="leading" constant="30" id="d2N-lM-qYb"/>
                             <constraint firstAttribute="bottom" secondItem="5Fz-l5-6qZ" secondAttribute="bottom" constant="30" id="n1z-ol-nqB"/>
+                            <constraint firstItem="3R9-SF-UaJ" firstAttribute="leading" secondItem="8qV-us-5h2" secondAttribute="leading" constant="322" id="oR1-4C-af8"/>
                         </constraints>
                     </view>
                 </viewController>
