@@ -19,7 +19,13 @@ class FileTXT: File {
     
     
     /**
-    Initializes the Abstract object File
+    Initializes a new FileTXT with the information and specifications.
+    This object follows the protocole File
+    
+    :param: path The path of the file
+    :param: content The content of the file
+    
+    :returns: A FileTXT with all the information.
     */
     init(path: String){
         self.path = path
@@ -27,8 +33,13 @@ class FileTXT: File {
         self.content = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: &err)
     }
     
+
     /**
-    Searches in the file the value of a licence key
+    This method searches in the file the value of a licence key.
+
+    :param: key The key witch is associated to the licence
+    
+    :returns: the value associated to the key
     */
     func findValue(key: String) -> String? {
         
@@ -71,7 +82,9 @@ class FileTXT: File {
     }
     
     /**
-    Returns true if the content is not nil
+    This method allows to know if the content of the file is nil.
+    
+    :returns: true if the content is not nil
     */
     func contentNotNil() -> Bool {
         
