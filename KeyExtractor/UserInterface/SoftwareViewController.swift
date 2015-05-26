@@ -68,6 +68,7 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
                 case "Sell":
                     let cell = tableView.makeViewWithIdentifier("check", owner: self) as! SoftwareButton
                     cell.checkbox.state = softwareList[row].getSell()
+                    cell.checkbox.representedObject = softwareList[row]
                     return cell
                     
                 default:
@@ -89,7 +90,11 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
                 softwareListSell.append(software)
             }
         }
+        
+        println("taille de ma liste")
+        println(softwareListSell.count)
+        
+        
     }
-    
 
 }

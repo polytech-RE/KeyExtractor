@@ -87,5 +87,13 @@ public class Software {
         
         return self.sell
     }
+    
+    /*
+    getter for the sell value
+    */
+    public func setSell(val: Int) {
+        
+        self.sell = val
+    }
 
 }

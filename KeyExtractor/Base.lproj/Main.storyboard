@@ -687,7 +687,7 @@
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="system"/>
                                                                 <connections>
-                                                                    <action selector="addToSell:" target="VuC-9h-jRM" id="G9J-GR-vjJ"/>
+                                                                    <action selector="addToSell:" target="VuC-9h-jRM" id="lRU-Ny-RQa"/>
                                                                 </connections>
                                                             </buttonCell>
                                                             <connections>

@@ -21,11 +21,15 @@ class SoftwareButton: NSButton {
     }
     
     @IBAction func addToSell(sender: NSButtonCell) {
-        if checkbox.state == 1 {
-            println("je met le software à vendre")
+        if self.checkbox.state == NSOnState{
+            let soft :Software = (self.checkbox.representedObject as? Software)!
+            soft.setSell(1)
+            println(self.checkbox.representedObject )//.setSell(1)
         }
-        else {
-            println("je le passe à zéro")
+        else{
+            let soft :Software = (self.checkbox.representedObject as? Software)!
+            soft.setSell(0)
         }
+    
     }
 }
