@@ -33,6 +33,7 @@ class FileFactory {
         
         var checkValidation = NSFileManager.defaultManager()
         
+        //we check if the file exists
         if(checkValidation.fileExistsAtPath(path)){
             
             switch format{
