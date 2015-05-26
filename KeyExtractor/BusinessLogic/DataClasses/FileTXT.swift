@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+///It's a representation of an file object, whitch is interpreted as a text file.
 class FileTXT: File {
     
     ///file path
@@ -20,10 +20,10 @@ class FileTXT: File {
     
     /**
     Initializes a new FileTXT with the information and specifications.
-    This object follows the protocole File
+    This object follows the protocole File.The content is initialize 
+    with the content of the file.
     
     :param: path The path of the file
-    :param: content The content of the file
     
     :returns: A FileTXT with all the information.
     */
@@ -37,7 +37,7 @@ class FileTXT: File {
     /**
     This method searches in the file the value of a licence key.
 
-    :param: key The key witch is associated to the licence
+    :param: key The key witch is associated with the licence
     
     :returns: the value associated to the key
     */
