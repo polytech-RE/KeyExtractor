@@ -10,10 +10,14 @@ import Cocoa
 
 class AddSoftwareViewController: NSViewController {
 
-    @IBOutlet weak var name: NSTextField!
-    @IBOutlet weak var licencePath: NSTextField!
-    @IBOutlet weak var format: NSPopUpButton!
-    @IBOutlet weak var infoPath: NSTextField!
+    
+    // MARK: Attributes
+    
+    ///The software textfields
+    @IBOutlet weak private var name: NSTextField!
+    @IBOutlet weak private var licencePath: NSTextField!
+    @IBOutlet weak private var format: NSPopUpButton!
+    @IBOutlet weak private var infoPath: NSTextField!
 
     
     //Label to print message error
@@ -21,7 +25,8 @@ class AddSoftwareViewController: NSViewController {
     @IBOutlet weak var licencePathError: NSTextField!
     @IBOutlet weak var informationPathError: NSTextField!
 
-
+    // MARK: Initializers
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,12 +34,8 @@ class AddSoftwareViewController: NSViewController {
 
         }
 
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
+    // MARK: Functions
+    
     @IBAction func send(sender: AnyObject) {
         
         //clean value

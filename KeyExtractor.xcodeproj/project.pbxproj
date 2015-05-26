@@ -35,8 +35,8 @@
 		ADA7408E1AEA1F0700966518 /* Software.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA740831AEA1F0700966518 /* Software.swift */; };
 		ADA7409C1AEA1F2100966518 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA740951AEA1F2100966518 /* Logger.swift */; };
 		ADA7409D1AEA1F2100966518 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA740951AEA1F2100966518 /* Logger.swift */; };
-		ADA740A01AEA1F2100966518 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA740991AEA1F2100966518 /* ViewController.swift */; };
-		ADA740A11AEA1F2100966518 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA740991AEA1F2100966518 /* ViewController.swift */; };
+		ADA740A01AEA1F2100966518 /* AddSoftwareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA740991AEA1F2100966518 /* AddSoftwareViewController.swift */; };
+		ADA740A11AEA1F2100966518 /* AddSoftwareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA740991AEA1F2100966518 /* AddSoftwareViewController.swift */; };
 		ADA740A31AEA4CC200966518 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA740A21AEA4CC200966518 /* Info.plist */; };
 		ADA740A41AEA4CC200966518 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA740A21AEA4CC200966518 /* Info.plist */; };
 		ADFDD7541AFA0BB00056D89F /* SoftwareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFDD7531AFA0BB00056D89F /* SoftwareCell.swift */; };
@@ -73,7 +73,7 @@
 		ADA740821AEA1F0700966518 /* FileXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileXML.swift; sourceTree = "<group>"; };
 		ADA740831AEA1F0700966518 /* Software.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Software.swift; sourceTree = "<group>"; };
 		ADA740951AEA1F2100966518 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		ADA740991AEA1F2100966518 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADA740991AEA1F2100966518 /* AddSoftwareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSoftwareViewController.swift; sourceTree = "<group>"; };
 		ADA740A21AEA4CC200966518 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = KeyExtractor/Info.plist; sourceTree = SOURCE_ROOT; };
 		ADFDD7531AFA0BB00056D89F /* SoftwareCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,7 +203,7 @@
 		ADA740981AEA1F2100966518 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				ADA740991AEA1F2100966518 /* ViewController.swift */,
+				ADA740991AEA1F2100966518 /* AddSoftwareViewController.swift */,
 				ADA279531AE7CC01005D8F88 /* Main.storyboard */,
 				AD40E1A31AF8F77B00DBFFF0 /* SoftwareViewController.swift */,
 				AD8F26191B020CA000C5F8A6 /* SoftwareButton.swift */,
@@ -317,7 +317,7 @@
 			files = (
 				ADA740891AEA1F0700966518 /* FilePlist.swift in Sources */,
 				ADA7408D1AEA1F0700966518 /* Software.swift in Sources */,
-				ADA740A01AEA1F2100966518 /* ViewController.swift in Sources */,
+				ADA740A01AEA1F2100966518 /* AddSoftwareViewController.swift in Sources */,
 				AD40E1A41AF8F77B00DBFFF0 /* SoftwareViewController.swift in Sources */,
 				ADA7408B1AEA1F0700966518 /* FileXML.swift in Sources */,
 				AD137A431AEF8C0C001B9D3B /* FileTXT.swift in Sources */,
@@ -344,7 +344,7 @@
 				AD137A441AEF8C0C001B9D3B /* FileTXT.swift in Sources */,
 				AD8F261B1B020CA000C5F8A6 /* SoftwareButton.swift in Sources */,
 				ADA7409D1AEA1F2100966518 /* Logger.swift in Sources */,
-				ADA740A11AEA1F2100966518 /* ViewController.swift in Sources */,
+				ADA740A11AEA1F2100966518 /* AddSoftwareViewController.swift in Sources */,
 				ADFDD7551AFA0BB00056D89F /* SoftwareCell.swift in Sources */,
 				AD137A411AEF7402001B9D3B /* SoftwareManager.swift in Sources */,
 				AD0C13511AEE450E008ACF09 /* FileFactory.swift in Sources */,
