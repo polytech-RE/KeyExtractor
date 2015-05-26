@@ -9,9 +9,10 @@
 import Foundation
 
 class SoftwareManager {
-    /**
-    */
+    
+    ///path to ways.txt (contain all the information about compatible software to search)
     private let pathListFile: String
+    ///list of pieces of software
     private var softwareList: [Software]
     
     init(){
@@ -24,7 +25,9 @@ class SoftwareManager {
     }
     
     
-    /*This function allows to find the software present in the file txt */
+    /**
+    This function allows to find the software present in the file txt 
+    */
     func fileSeek()-> Software? {
     
         let file: FileTXT?
@@ -128,9 +131,9 @@ class SoftwareManager {
         return nil
     }
     
-    /*  This function allows to find all the software
-        with licence in  the basic folder (maybe
-        /Library/Preferences)
+    /**  This function allows to find all the software
+        with licence in the basic folder (maybe
+        /Library/Preferences) NOT WORKING YET
     */
     func autoSeek()-> Software? {
         var currentFile:FileXML
@@ -147,7 +150,11 @@ class SoftwareManager {
         }
         return nil
     }
+    /**
+    Getter for the list of software
     
+    :return: softwareList
+    */
     func getSoftwares() ->[Software] {
         return self.softwareList
     }
