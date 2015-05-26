@@ -46,22 +46,22 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
                 switch identifier{
                     
                 case "Name":
-                    let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
+                    let cell = tableView.makeViewWithIdentifier("SoftwareCellName", owner: self) as! SoftwareCell
                     cell.softwareName.stringValue = softwareList[row].getName()
                     return cell
                     
                 case "Copyright":
-                    let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
+                    let cell = tableView.makeViewWithIdentifier("SoftwareCellCopyright", owner: self) as! SoftwareCell
                     cell.softwareName.stringValue = softwareList[row].getCopyright()
                     return cell
                     
                 case "Version":
-                    let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
+                    let cell = tableView.makeViewWithIdentifier("SoftwareCellVersion", owner: self) as! SoftwareCell
                     cell.softwareName.stringValue = softwareList[row].getVersion()
                     return cell
                     
                 case "Key":
-                    let cell = tableView.makeViewWithIdentifier("SoftwareCell", owner: self) as! SoftwareCell
+                    let cell = tableView.makeViewWithIdentifier("SoftwareCellKey", owner: self) as! SoftwareCell
                     cell.softwareName.stringValue = softwareList[row].getKey()
                     return cell
                     
@@ -72,13 +72,14 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
                     return cell
                     
                 default:
+                    NSException(name: "Error Tab identifier", reason: "TabColumn identifier desn't exist", userInfo: nil)
                     return nil
-                    //TODO Exception
+
                 }
             }
         }
+        NSException(name: "Error row > software number", reason: "row great than the software number", userInfo: nil)
         return nil
-        //TODO Exception
     }
 
     @IBAction func addSoftwareSell(sender: AnyObject) {
@@ -93,7 +94,6 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
         
         println("taille de ma liste")
         println(softwareListSell.count)
-        
         
     }
 
