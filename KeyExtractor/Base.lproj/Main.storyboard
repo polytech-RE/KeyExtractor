@@ -831,7 +831,7 @@
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontal="YES" id="Mjy-iz-Cop">
+                                <scroller key="horizontalScroller" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontal="YES" id="Mjy-iz-Cop">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -867,10 +867,10 @@
             </objects>
             <point key="canvasLocation" x="684" y="736"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Software View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="KeyExtractor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="AddSoftwareViewController" customModule="KeyExtractor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="476" height="296"/>
                         <autoresizingMask key="autoresizingMask"/>

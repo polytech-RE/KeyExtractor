@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class AddSoftwareViewController: NSViewController {
 
     @IBOutlet weak var name: NSTextField!
     @IBOutlet weak var licencePath: NSTextField!
