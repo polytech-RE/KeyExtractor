@@ -55,7 +55,7 @@ class FileXML: NSObject, File, NSXMLParserDelegate{
         if testKey(currentValue){
             println("KEY FOUND : \(currentValue)")
         }
-        currentValue = ""
+        currentValue = ""                  
         
     }
     func testKey(content:String) -> Bool {

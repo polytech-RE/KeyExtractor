@@ -9,7 +9,8 @@
 import Foundation
 
 class SoftwareManager {
-    
+    /**
+    */
     private let pathListFile: String
     private var softwareList: [Software]
     

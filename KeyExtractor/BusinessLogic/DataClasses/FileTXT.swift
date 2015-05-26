@@ -11,16 +11,15 @@ import Foundation
 
 class FileTXT: File {
     
-    //
-    
+    ///file path
     let path: String
     
+    ///file content
     let content : String?
     
-    //initializers
     
-    /*  Initialize the Abstract object File
-    with the path
+    /**
+    Initializes the Abstract object File
     */
     init(path: String){
         self.path = path
@@ -28,8 +27,9 @@ class FileTXT: File {
         self.content = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: &err)
     }
     
-    //functions
-
+    /**
+    Searches in the file the value of a licence key
+    */
     func findValue(key: String) -> String? {
         
         if ( self.contentNotNil() ){
@@ -70,7 +70,9 @@ class FileTXT: File {
         return nil
     }
     
-    /*return true if the content isn't nil*/
+    /**
+    Returns true if the content is not nil
+    */
     func contentNotNil() -> Bool {
         
         return self.content != nil;

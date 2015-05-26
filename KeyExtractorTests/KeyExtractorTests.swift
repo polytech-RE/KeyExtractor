@@ -34,13 +34,14 @@ class KeyExtractorTests: XCTestCase {
     }
     func testFilePlist() {
         
-        let path = "/Library/Preferences/com.microsoft.office.licensing.plist"
+        //let path = "/Library/Preferences/com.microsoft.office.licensing.plist"
+        let path = "/Library/Preferences/com.druide.Antidote.plist"
         XCTAssertNotNil(path,"problème d'initialisation du path")
         
         let filePlist : FilePlist
         filePlist = FilePlist(path: path)
         
-        let key: String = "sequence"
+        let key: String = "noDeSerie"
         
         XCTAssertNotNil(filePlist,"problème du fichier Plist")
         
