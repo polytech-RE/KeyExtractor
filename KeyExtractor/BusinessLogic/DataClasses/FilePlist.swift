@@ -8,18 +8,27 @@
 
 import Foundation
 
+///It's a representation of an file object, whitch is written with the plist format.
 class FilePlist: File {
     
-    //
+    // MARK: Attributes
     
+    ///file path
     let path: String
     
+    ///content of the file as dictionary
     let dictionary : NSDictionary
     
-    //initializers
+    // MARK: Initializers
     
-    /*  Initialize the Abstract object File
-        with the path 
+    /**
+    Initializes a new FilePlist with the information and specifications.
+    This object follows the protocole File.The dictionary is initialize
+    with the content of the file.
+    
+    :param: path The path of the file
+    
+    :returns: A FilePlist with all the information.
     */
     init(path: String){
         self.path = path
@@ -34,13 +43,18 @@ class FilePlist: File {
         
     }
     
-    //functions
+    // MARK: functions
     
-    /*  This function allows to find a string value
+    /** 
+        This function allows to find a string value
         in a plist file.
         The plist file use a key-value system, ie
         for example, with the key licensing in a plist
         we can find a software licence
+    
+        :param: key The key witch is associated with the licence
+    
+        :returns: the value associated to the key
     */
     func findValue(key: String) -> String? {
         
@@ -55,6 +69,17 @@ class FilePlist: File {
         return nil
     }
     
+    /**
+    This function allows to find a string value
+    in a plist file.
+    The plist file use a key-value system, ie
+    for example, with the key licensing in a plist
+    we can find a software licence
+    
+    :param: key The key witch is associated with the licence
+    
+    :returns: the value associated to the key as a generic object
+    */
     func findValueAny(key: String) -> AnyObject? {
         
         if ( self.dictionary.objectForKey(key) != nil ){
