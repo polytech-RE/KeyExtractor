@@ -8,34 +8,40 @@
 
 import Cocoa
 
+///Represents the controller for the Software List View
 class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
 
-    @IBOutlet
-    var tableView: NSTableView!
+    // MARK: Attributes
     
+    ///The TableView
+    @IBOutlet private var tableView: NSTableView!
+    
+    ///The software list
     private var softwareList: [Software] = []
+    
+    // MARK: Initializers
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //initialize the software manager
         let softwareManager: SoftwareManager = SoftwareManager()
+        
+        //launch the research of the software
         softwareManager.fileSeek()
+        
+        //The software list is initialisedwith the software detected on the computor
         softwareList = softwareManager.getSoftwares()
 
     }
+    
+    // MARK: Functions
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int{
     
         /* This method is required for the "Cell Based" TableView, and is optional for the "View Based" TableView. If implemented in the latter case, the value will be set to the view at a given row/column if the view responds to -setObjectValue: (such as NSControl and NSTableCellView).
         */
         return softwareList.count
-    }
-
-    func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject?{
-    
-        /* NOTE: This method is not called for the View Based TableView.
-        */
-        return nil
     }
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
@@ -47,28 +53,27 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
                     
                 case "Name":
                     let cell = tableView.makeViewWithIdentifier("SoftwareCellName", owner: self) as! SoftwareCell
-                    cell.softwareName.stringValue = softwareList[row].getName()
+                    cell.loadItem(softwareList[row].getName())
                     return cell
                     
                 case "Copyright":
                     let cell = tableView.makeViewWithIdentifier("SoftwareCellCopyright", owner: self) as! SoftwareCell
-                    cell.softwareName.stringValue = softwareList[row].getCopyright()
+                    cell.loadItem(softwareList[row].getCopyright())
                     return cell
                     
                 case "Version":
                     let cell = tableView.makeViewWithIdentifier("SoftwareCellVersion", owner: self) as! SoftwareCell
-                    cell.softwareName.stringValue = softwareList[row].getVersion()
+                   cell.loadItem(softwareList[row].getVersion())
                     return cell
                     
                 case "Key":
                     let cell = tableView.makeViewWithIdentifier("SoftwareCellKey", owner: self) as! SoftwareCell
-                    cell.softwareName.stringValue = softwareList[row].getKey()
+                    cell.loadItem(softwareList[row].getKey())
                     return cell
                     
                 case "Sell":
                     let cell = tableView.makeViewWithIdentifier("check", owner: self) as! SoftwareButton
-                    cell.checkbox.state = softwareList[row].getSell()
-                    cell.checkbox.representedObject = softwareList[row]
+                    cell.loadItem(softwareList[row])
                     return cell
                     
                 default:
@@ -97,4 +102,19 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
         
     }
 
+}
+
+extension SoftwareViewController{
+    
+    @IBAction func ModifyStateSoftware(sender: SoftwareButton) {
+        if sender.getState() == NSOnState{
+            let soft :Software = sender.getRepresentatedObject()!
+            soft.setSell(1)
+        }
+        else{
+            let soft :Software = sender.getRepresentatedObject()!
+            soft.setSell(0)
+        }
+        
+    }
 }

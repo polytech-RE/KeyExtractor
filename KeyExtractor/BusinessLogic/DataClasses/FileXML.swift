@@ -11,6 +11,8 @@ import Foundation
 ///It's a representation of an file object, whitch is written with the XML language.
 class FileXML: NSObject, File, NSXMLParserDelegate{
     
+    // MARK: Attributes
+    
     ///file path
     let path: String
     
@@ -23,6 +25,7 @@ class FileXML: NSObject, File, NSXMLParserDelegate{
     ///the value associated with the current key
     var currentValue: String
     
+    // MARK: Initializers
     
     /**
     Initializes a new FileXML with the information and specifications.
@@ -38,6 +41,8 @@ class FileXML: NSObject, File, NSXMLParserDelegate{
 
         self.licence = String()
     }
+    
+    // MARK: functions
     
     func findValue(key: String) -> String? {
         return ""

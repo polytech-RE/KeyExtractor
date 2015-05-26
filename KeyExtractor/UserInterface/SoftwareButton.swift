@@ -8,28 +8,42 @@
 
 import Cocoa
 
+///Represents the button associated with a software. The button modify the state of the software.
 class SoftwareButton: NSButton {
     
-    @IBOutlet weak var checkbox: NSButtonCell!
+    // MARK: Attributes
+    
+    ///Represents the checkbox (in the button)
+    @IBOutlet weak private var checkbox: NSButtonCell!
 
-    func load( val: Int){
-        self.checkbox.state = val
+    // MARK: Functions
+    
+    /**
+    This method allows to initialize the state of the checkbox
+    
+    :param: software The software associated with the button
+    */
+    func loadItem(software: Software){
+        self.checkbox.representedObject = software
+        self.checkbox.state = software.getSell()
     }
     
+    /**
+    This method allows to get the state of the checkbox.
+    
+    :returns: The value corresponding to the software's state
+    */
     func getState() -> Int {
         return self.checkbox.state
     }
     
-    @IBAction func addToSell(sender: NSButtonCell) {
-        if self.checkbox.state == NSOnState{
-            let soft :Software = (self.checkbox.representedObject as? Software)!
-            soft.setSell(1)
-            println(self.checkbox.representedObject )//.setSell(1)
-        }
-        else{
-            let soft :Software = (self.checkbox.representedObject as? Software)!
-            soft.setSell(0)
-        }
+    /**
+    This method allows to get the software associated with the checkbox.
     
+    :returns: The software associated with the checkbox
+    */
+    func getRepresentatedObject() -> Software?{
+       return self.checkbox.representedObject as? Software
     }
+    
 }

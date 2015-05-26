@@ -11,12 +11,15 @@ import Foundation
 ///It's a representation of an file object, whitch is interpreted as a text file.
 class FileTXT: File {
     
+    // MARK: Attributes
+    
     ///file path
     let path: String
     
     ///file content
     let content : String?
     
+    // MARK: Initializers
     
     /**
     Initializes a new FileTXT with the information and specifications.
@@ -33,7 +36,8 @@ class FileTXT: File {
         self.content = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: &err)
     }
     
-
+    // MARK: functions
+    
     /**
     This method searches in the file the value of a licence key.
 
