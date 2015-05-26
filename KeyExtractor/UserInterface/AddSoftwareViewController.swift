@@ -89,8 +89,12 @@ class AddSoftwareViewController: NSViewController {
                     
                     fileHandle.seekToEndOfFile()
                     fileHandle.writeData(encodingLine)
-                    println(encodingLine)
                     fileHandle.closeFile()
+                    
+                    name.stringValue = ""
+                    licencePath.stringValue = ""
+                    infoPath.stringValue = ""
+                    
                 }
                 else {
                     println("Can't open fileHandle \(err)")
