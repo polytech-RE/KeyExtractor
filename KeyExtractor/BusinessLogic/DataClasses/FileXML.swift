@@ -8,16 +8,29 @@
 
 import Foundation
 
+///It's a representation of an file object, whitch is written with the XML language.
 class FileXML: NSObject, File, NSXMLParserDelegate{
     
+    ///file path
     let path: String
+    
+    
     var licence: String?
+    
+    ///current key observed
     var currentKey: AnyObject?
+    
+    ///the value associated with the current key
     var currentValue: String
     
     
-    /*  Initialize the Abstract object File
-    with the path
+    /**
+    Initializes a new FileXML with the information and specifications.
+    This object follows the protocole File.
+    
+    :param: path The path of the file
+    
+    :returns: A FileXML with all the information.
     */
     init(path:String){
         self.currentValue = String()
@@ -29,6 +42,7 @@ class FileXML: NSObject, File, NSXMLParserDelegate{
     func findValue(key: String) -> String? {
         return ""
     }
+    
     func startParsing(){
             println("ATTENTION BLABLALBALBLABLABLALB : \(path)")
         
