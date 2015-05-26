@@ -6,41 +6,43 @@
 //  Copyright (c) 2015 polytech-RE. All rights reserved.
 //
 
-/*!
-@header Software.swift
-*/
-
 import Foundation
 
+/// Software usually refers to instructions for computer hardware to execute
 public class Software {
     
-    /*
-    The software name
-    */
+    ///The software name
     private var name : String
     
-    /*
-    The software copyright
-    */
+    
+    ///The software copyright
     private var copyright : String
 
-    /*
-    The software version
-    */
+    ///The software version
     private var version : String
     
-    /*
-    The software key (ex 'AAA-BBBB-CCCCC-EEEEE')
-    */
+    ///The software key (ex 'AAA-BBBB-CCCCC-EEEEE')
     private var key : String
     
-    /*
-    attribute to know if the software is to sell
+    /**
+    This attribute allows to know the state of a software.
+
+        - 1 : The user would like to sell the software
+        - 0 : The user would like to keep the software
     */
     private var sell : Int
     
-    //private var keys: Set<SoftwareKey> //Set<SoftwareKey>
+    /**
+    Initializes a new software with the information and specifications.
     
+    :param: name The software name
+    :param: copyright The software copyright
+    :param: version The software version
+    :param: key The software key (ex 'AAA-BBBB-CCCCC-EEEEE')
+
+    
+    :returns: A software with all the information.
+    */
     init(name: String, copyright: String, version: String, key: String) {
         self.name = name
         self.copyright = copyright
@@ -49,7 +51,7 @@ public class Software {
         self.sell = 0
     }
     
-    //Getters
+    // MARK: Getters
     
     /**
     This method get the name of a software.
