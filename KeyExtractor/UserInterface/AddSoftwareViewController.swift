@@ -13,14 +13,14 @@ class AddSoftwareViewController: NSViewController {
     
     // MARK: Attributes
     
-    ///The software textfields
+    //The software attributes to display in textfields
     @IBOutlet weak private var name: NSTextField!
     @IBOutlet weak private var licencePath: NSTextField!
     @IBOutlet weak private var format: NSPopUpButton!
     @IBOutlet weak private var infoPath: NSTextField!
 
     
-    //Label to print message error
+    //Labels to print message error
     @IBOutlet weak var nameError: NSTextField!
     @IBOutlet weak var licencePathError: NSTextField!
     @IBOutlet weak var informationPathError: NSTextField!
@@ -36,7 +36,9 @@ class AddSoftwareViewController: NSViewController {
 
     // MARK: Functions
     
-    @IBAction func send(sender: AnyObject) {
+    /**Write information about a software in ways.txt in order to be able to search and find its licence key
+    */
+    @IBAction func addSoftwareToSearch(sender: AnyObject) {
         
         //clean value
         nameError!.stringValue = ""
@@ -66,7 +68,6 @@ class AddSoftwareViewController: NSViewController {
                 formatValue = "txt"
             default:
                 formatValue = String()
-                //TODO ERROR
         }
 
         // record information

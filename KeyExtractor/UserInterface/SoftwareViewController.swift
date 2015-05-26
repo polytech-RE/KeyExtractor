@@ -21,29 +21,39 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
     
     // MARK: Initializers
     
+    /**
+    Initializes the software manager.
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //initialize the software manager
         let softwareManager: SoftwareManager = SoftwareManager()
         
-        //launch the research of the software
+        //launch the research of software
         softwareManager.fileSeek()
         
-        //The software list is initialisedwith the software detected on the computor
+        //The software list is initialised with software detected on the computor
         softwareList = softwareManager.getSoftwares()
 
     }
     
     // MARK: Functions
     
+    /**
+    Returns the number of rows in the table view (equal to the number of software)
+    
+    :return: softwareList.count
+    */
     func numberOfRowsInTableView(tableView: NSTableView) -> Int{
     
         /* This method is required for the "Cell Based" TableView, and is optional for the "View Based" TableView. If implemented in the latter case, the value will be set to the view at a given row/column if the view responds to -setObjectValue: (such as NSControl and NSTableCellView).
         */
         return softwareList.count
     }
-    
+    /**
+    Initializes the table view of software
+    */
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
 
         if row < softwareList.count {	// prevents a rare crash when the last app in the table quits
@@ -86,7 +96,7 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
         NSException(name: "Error row > software number", reason: "row great than the software number", userInfo: nil)
         return nil
     }
-
+    ///Add a software to the sell list
     @IBAction func addSoftwareSell(sender: AnyObject) {
         
         var softwareListSell: [Software] = []
@@ -106,6 +116,7 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
 
 extension SoftwareViewController{
     
+    ///Switch the software state between to-sell or not-to-sell
     @IBAction func ModifyStateSoftware(sender: SoftwareButton) {
         if sender.getState() == NSOnState{
             let soft :Software = sender.getRepresentatedObject()!

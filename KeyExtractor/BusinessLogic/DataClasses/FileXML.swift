@@ -49,7 +49,6 @@ class FileXML: NSObject, File, NSXMLParserDelegate{
     }
     
     func startParsing(){
-            println("ATTENTION BLABLALBALBLABLABLALB : \(path)")
         
         if let data: NSData = NSData(contentsOfFile: path) {
             var objNSXMLParser = NSXMLParser(data: data)
@@ -63,17 +62,12 @@ class FileXML: NSObject, File, NSXMLParserDelegate{
     
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
         currentKey=("\(elementName) \(attributeDict.values.array)")
-        println("currentKey : \(currentKey!)")
     }
     
     func parser(parser: NSXMLParser, foundCharacters string: String?) {
         currentValue += string ?? String()
     }
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?){
-        println("{currentValue : \(currentValue)}")
-        if testKey(currentValue){
-            println("KEY FOUND : \(currentValue)")
-        }
         currentValue = ""                  
         
     }
