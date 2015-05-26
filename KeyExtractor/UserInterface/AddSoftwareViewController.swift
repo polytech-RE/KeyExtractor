@@ -16,6 +16,7 @@ class AddSoftwareViewController: NSViewController {
     //The software attributes to display in textfields
     @IBOutlet weak private var name: NSTextField!
     @IBOutlet weak private var licencePath: NSTextField!
+    @IBOutlet weak var softwareKey: NSTextField!
     @IBOutlet weak private var format: NSPopUpButton!
     @IBOutlet weak private var infoPath: NSTextField!
 
@@ -23,6 +24,7 @@ class AddSoftwareViewController: NSViewController {
     //Labels to print message error
     @IBOutlet weak var nameError: NSTextField!
     @IBOutlet weak var licencePathError: NSTextField!
+    @IBOutlet weak var keyError: NSTextField!
     @IBOutlet weak var informationPathError: NSTextField!
 
     // MARK: Initializers
@@ -44,17 +46,22 @@ class AddSoftwareViewController: NSViewController {
         nameError!.stringValue = ""
         licencePathError!.stringValue  = ""
         informationPathError!.stringValue = ""
+        keyError!.stringValue = ""
         
         //check the fields
         if(name.stringValue == ""){
-            nameError!.stringValue = "fill the field name"
+            nameError!.stringValue = "fill the field: name"
         }
         if(licencePath.stringValue == ""){
-            licencePathError!.stringValue = "fill the field licence path"
+            licencePathError!.stringValue = "fill the field: licence path"
         }
         if(infoPath.stringValue == ""){
             informationPathError!.stringValue = "fill this field"
         }
+        if(softwareKey.stringValue == ""){
+            keyError!.stringValue = "fill the field: key"
+        }
+
         
         let formatValue: String
         
@@ -74,7 +81,7 @@ class AddSoftwareViewController: NSViewController {
         if( name != "" && licencePath != "" && infoPath != ""){
             
             let line: String
-            line = name.stringValue + ";" + licencePath.stringValue + ";" + formatValue + "\n"
+            line = name.stringValue + ";" + licencePath.stringValue + ";" + formatValue + ";" +  softwareKey.stringValue + ";" + infoPath.stringValue + "\n"
             let encodingLine = line.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
     
             let dir:String = NSFileManager.defaultManager().currentDirectoryPath

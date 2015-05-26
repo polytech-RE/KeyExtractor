@@ -17,8 +17,6 @@
 		AD137A441AEF8C0C001B9D3B /* FileTXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD137A421AEF8C0C001B9D3B /* FileTXT.swift */; };
 		AD40E1A41AF8F77B00DBFFF0 /* SoftwareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40E1A31AF8F77B00DBFFF0 /* SoftwareViewController.swift */; };
 		AD40E1A51AF8F77B00DBFFF0 /* SoftwareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40E1A31AF8F77B00DBFFF0 /* SoftwareViewController.swift */; };
-		AD7ADBB11AF8AC610006E9C0 /* ways.txt in Resources */ = {isa = PBXBuildFile; fileRef = AD7ADBB01AF8AC610006E9C0 /* ways.txt */; };
-		AD7ADBB21AF8AC610006E9C0 /* ways.txt in Resources */ = {isa = PBXBuildFile; fileRef = AD7ADBB01AF8AC610006E9C0 /* ways.txt */; };
 		AD8F261A1B020CA000C5F8A6 /* SoftwareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8F26191B020CA000C5F8A6 /* SoftwareButton.swift */; };
 		AD8F261B1B020CA000C5F8A6 /* SoftwareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8F26191B020CA000C5F8A6 /* SoftwareButton.swift */; };
 		ADA2794E1AE7CC01005D8F88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */; };
@@ -59,7 +57,6 @@
 		AD137A3F1AEF7402001B9D3B /* SoftwareManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareManager.swift; sourceTree = "<group>"; };
 		AD137A421AEF8C0C001B9D3B /* FileTXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTXT.swift; sourceTree = "<group>"; };
 		AD40E1A31AF8F77B00DBFFF0 /* SoftwareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareViewController.swift; sourceTree = "<group>"; };
-		AD7ADBB01AF8AC610006E9C0 /* ways.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ways.txt; path = KeyExtractor/ways.txt; sourceTree = "<group>"; };
 		AD8F26191B020CA000C5F8A6 /* SoftwareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareButton.swift; sourceTree = "<group>"; };
 		ADA279481AE7CC01005D8F88 /* KeyExtractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyExtractor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA2794D1AE7CC01005D8F88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				ADA2794A1AE7CC01005D8F88 /* KeyExtractor */,
-				AD7ADBB01AF8AC610006E9C0 /* ways.txt */,
 				ADA2795D1AE7CC01005D8F88 /* KeyExtractorTests */,
 				ADA279491AE7CC01005D8F88 /* Products */,
 			);
@@ -294,7 +290,6 @@
 			files = (
 				ADA279521AE7CC01005D8F88 /* Images.xcassets in Resources */,
 				ADA279551AE7CC01005D8F88 /* Main.storyboard in Resources */,
-				AD7ADBB11AF8AC610006E9C0 /* ways.txt in Resources */,
 				ADA740A31AEA4CC200966518 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +298,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD7ADBB21AF8AC610006E9C0 /* ways.txt in Resources */,
 				ADA740A41AEA4CC200966518 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
