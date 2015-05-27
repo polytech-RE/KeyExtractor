@@ -24,8 +24,8 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
     /**
     Initializes the software manager.
     */
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear() {
+        super.viewDidAppear()
         
         //initialize the software manager
         let softwareManager: SoftwareManager = SoftwareManager()
@@ -35,8 +35,9 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
         
         //The software list is initialised with software detected on the computor
         softwareList = softwareManager.getSoftwares()
-
+        
     }
+
     
     // MARK: Functions
     
