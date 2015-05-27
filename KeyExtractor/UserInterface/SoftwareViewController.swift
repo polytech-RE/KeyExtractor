@@ -110,6 +110,7 @@ class SoftwareViewController: NSViewController, NSTableViewDataSource, NSTableVi
         println("taille de ma liste")
         println(softwareListSell.count)
         
+        
     }
 
 }

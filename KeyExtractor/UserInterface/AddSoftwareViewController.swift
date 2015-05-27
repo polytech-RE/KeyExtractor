@@ -84,11 +84,9 @@ class AddSoftwareViewController: NSViewController {
             line = name.stringValue + ";" + licencePath.stringValue + ";" + formatValue + ";" +  softwareKey.stringValue + ";" + infoPath.stringValue + "\n"
             let encodingLine = line.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
     
-            let dir:String = NSFileManager.defaultManager().currentDirectoryPath
+            let dir:String = NSBundle.mainBundle().bundlePath
 
             let fileurl = dir + "/ways.txt"
-            println(fileurl)
-            println(NSBundle.mainBundle().bundlePath)
             
             if NSFileManager.defaultManager().fileExistsAtPath(fileurl) {
                 var err:NSError?

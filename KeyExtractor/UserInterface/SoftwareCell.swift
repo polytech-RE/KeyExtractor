@@ -11,8 +11,12 @@ import Cocoa
 ///Represents a generic software Cell (used for the name, the version, the copyright and the key)
 class SoftwareCell: NSTableCellView {
     
+    // MARK: Attributes
+    
     ///represents the text field in the cell (connected to the storyboard)
     @IBOutlet weak private var softwareText: NSTextField!
+    
+    // MARK: Functions
     
     /**
     This method allows to initialize the text in the cell.

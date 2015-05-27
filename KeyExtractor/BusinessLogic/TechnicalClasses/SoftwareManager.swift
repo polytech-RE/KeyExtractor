@@ -10,18 +10,24 @@ import Foundation
 
 class SoftwareManager {
     
+    // MARK: Attributes
+    
     ///path to ways.txt (contain all the information about compatible software to search)
     private let pathListFile: String
+    
     ///list of pieces of software
     private var softwareList: [Software]
     
+    // MARK: Initializers
+    
     init(){
         
-        self.pathListFile = NSFileManager.defaultManager().currentDirectoryPath + "/ways.txt"
+        self.pathListFile = NSBundle.mainBundle().bundlePath + "/ways.txt"
         self.softwareList = [Software]()
         
     }
     
+    // MARK: Functions
     
     /**
     This function allows to find the software present in the file txt 
@@ -72,28 +78,15 @@ class SoftwareManager {
                     copyright = fileInfo?.findValue("NSHumanReadableCopyright")
                     
                     if (softwareVersion != nil && copyright != nil){
-                        println("version")
-                        println(softwareVersion)
-                        println("copyright")
-                        println(copyright)
-
                 
                         //get the software information
-                        println("File Path")
-                        println(softwareLicenceFilePath)
-                        println("File Format")
-                        println(softwareLicenceFileFormat)
                 
                         fileLicence = FileFactory.createFile(softwareLicenceFilePath, format: softwareLicenceFileFormat)
                 
                         if (fileLicence != nil){
-                            println("Key Name")
-                            println(softwareLicenceKeyName)
                 
                             softwareKey = fileLicence?.findValue(softwareLicenceKeyName)
-                
-                            println("software Key")
-                            println(softwareKey)
+
                             if softwareKey != nil {
                                 //create the software with the information
                                 let software :Software
